@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Text } from "@chakra-ui/react";
+import { Text, useColorModeValue } from "@chakra-ui/react";
 import styled from "@emotion/styled";
 
 const LogoBox = styled.span`
@@ -22,7 +22,10 @@ export const Logo = () => {
         <Link href="/">
             <LogoBox>
                 <Image
-                    src="/images/logo.png"
+                    src={useColorModeValue(
+                        "/images/logoLightMode.png",
+                        "/images/logo.png"
+                    )}
                     width={50}
                     height={50}
                     alt="logo"
