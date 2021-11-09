@@ -79,6 +79,10 @@ const Page = () => {
                         Bio
                     </Heading>
                     <BioSection>
+                        <BioYear>2019-2020</BioYear>
+                        Software Developer and UX Designer - PAHA
+                    </BioSection>
+                    <BioSection>
                         <BioYear>2020</BioYear>
                         Graduated from Michigan State University
                     </BioSection>
