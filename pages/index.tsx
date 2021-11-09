@@ -66,12 +66,13 @@ const Page = () => {
                         About Me
                     </Heading>
                     <Paragraph>
-                        I'm a mostly remote dev who creates minimal, effective
-                        products and sometimes has a hand in designing them.
-                        Whether it's mockups, prototypes, back-end, or front-end
-                        I have the skills required to create and experience the
-                        user will never forget. I focus on products from a human
-                        perspective as well as business.
+                        I am a remote developer who creates minimal, effective
+                        products, and sometime has a hand in designing them.
+                        Whether it is mockups, prototypes, back-end, or
+                        front-end, I have the technical skills required to
+                        create an unforgettable experience for the website
+                        users. I focus on services and products from an ethical
+                        standpoint as well as profitable standpoint.
                     </Paragraph>
                 </Section>
                 <Section delay={"0.2"}>
