@@ -14,7 +14,7 @@ const Project = () => {
                 </Title>
                 <Paragraph>
                     A Raspberry Pi Cam to keep an eye on my dog while I'm away.
-                    Making sure my dog was safe while I was going to the store,
+                    Making sure my dog is safe while I was going to the store,
                     the gym, anywhere that wasn't home, is very important to me.
                     So to make sure he didn't get into any trouble I set up a Pi
                     Cam to stream to another Pi I set up as a server so I could
