@@ -114,19 +114,6 @@ const Page = () => {
                                 <Button
                                     variant="ghost"
                                     colorScheme={"red"}
-                                    leftIcon={<Icon as={BsGithub} />}
-                                    href="https://github.com/coltonatsource"
-                                >
-                                    @coltonatsource
-                                </Button>
-                            </Link>
-                        </ListItem>
-
-                        <ListItem>
-                            <Link href="/" target="_blank">
-                                <Button
-                                    variant="ghost"
-                                    colorScheme={"red"}
                                     leftIcon={<Icon as={BsLinkedin} />}
                                     href="https://www.linkedin.com/in/coltonalmaraz/"
                                 >
