@@ -23,8 +23,8 @@ export const Logo = () => {
             <LogoBox>
                 <Image
                     src="/images/logo.png"
-                    width={20}
-                    height={20}
+                    width={50}
+                    height={50}
                     alt="logo"
                 />
                 <Text fontWeight="bold" ml={3}>

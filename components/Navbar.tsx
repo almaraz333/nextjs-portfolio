@@ -58,23 +58,24 @@ const Navbar = (props) => {
                 align="center"
                 justify="space-between"
             >
-                <Flex align="center" mr={5}>
-                    <Heading as="h1" size="lg" letterSpacing="tighter">
+                <Flex align="flex-start" mr={5}>
+                    <Heading as="h1" size="l" letterSpacing="tighter" pt={1}>
                         <Logo />
                     </Heading>
+
+                    <Stack
+                        direction={{ base: "column", md: "row" }}
+                        display={{ base: "none", md: "flex" }}
+                        width={{ base: "full", md: "auto" }}
+                        alignItems="flex-start"
+                        flexGrow={1}
+                        // mt={1}
+                    >
+                        <LinkItem href="/projects" path={"path"}>
+                            Projects
+                        </LinkItem>
+                    </Stack>
                 </Flex>
-                <Stack
-                    direction={{ base: "column", md: "row" }}
-                    display={{ base: "none", md: "flex" }}
-                    width={{ base: "full", md: "auto" }}
-                    alignItems="center"
-                    flexGrow={1}
-                    mt={{ base: 4, nmd: 0 }}
-                >
-                    <LinkItem href="/projects" path={"path"}>
-                        Projects
-                    </LinkItem>
-                </Stack>
 
                 <Box flex={1} align="right">
                     <ThemeToggle />
