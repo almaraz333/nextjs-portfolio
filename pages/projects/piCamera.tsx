@@ -30,7 +30,7 @@ const Project = () => {
 
                     <ProjectImage
                         src="/images/projects/Ranger.jpg"
-                        alt="game of life"
+                        alt="Ranger the dog"
                     />
                 </Box>
             </Container>

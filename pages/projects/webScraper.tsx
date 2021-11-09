@@ -37,7 +37,7 @@ const Project = () => {
 
                     <ProjectImage
                         src="/images/projects/proFootballRef.png"
-                        alt="game of life"
+                        alt="football site"
                     />
                 </Box>
             </Container>
