@@ -1,4 +1,10 @@
-import { Container, Box, Heading, SimpleGrid, Divider } from "@chakra-ui/react";
+import {
+    Container,
+    Heading,
+    SimpleGrid,
+    Divider,
+    Text
+} from "@chakra-ui/react";
 
 import { Section } from "../components/Section";
 import { GridItem } from "../components/GridItem";
@@ -13,9 +19,9 @@ const Projects = () => {
     return (
         <Layout>
             <Container>
-                <Heading as="h2" fontSize={20} mb={4}>
+                <Text as="h2" fontSize={20} mb={4}>
                     Professional
-                </Heading>
+                </Text>
                 <SimpleGrid columns={[1, 1, 2]} gap={6}>
                     <Section>
                         <GridItem
@@ -51,9 +57,9 @@ const Projects = () => {
                     </Section>
                 </SimpleGrid>
                 <Divider />
-                <Heading as="h2" fontSize={20} my={4}>
+                <Text as="h2" fontSize={20} my={4}>
                     Personal
-                </Heading>
+                </Text>
 
                 <SimpleGrid columns={[1, 1, 2]} gap={6}>
                     <Section>
