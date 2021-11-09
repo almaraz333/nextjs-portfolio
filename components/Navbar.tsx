@@ -69,10 +69,15 @@ const Navbar = (props) => {
                         width={{ base: "full", md: "auto" }}
                         alignItems="flex-start"
                         flexGrow={1}
-                        // mt={1}
                     >
                         <LinkItem href="/projects" path={"path"}>
                             Projects
+                        </LinkItem>
+                        <LinkItem
+                            href="/docs/AlmarazColton_Resume.pdf"
+                            path={"path"}
+                        >
+                            Resume
                         </LinkItem>
                     </Stack>
                 </Flex>
@@ -99,6 +104,16 @@ const Navbar = (props) => {
                                     passHref
                                 >
                                     <MenuItem as={Link}>Source</MenuItem>
+                                </NextLink>
+                                <NextLink
+                                    href="/docs/AlmarazColton_Resume.pdf"
+                                    passHref
+                                >
+                                    <MenuItem as={Link}>
+                                        <a href="/docs/AlmarazColton_Resume.pdf">
+                                            Resume
+                                        </a>
+                                    </MenuItem>
                                 </NextLink>
                             </MenuList>
                         </Menu>
