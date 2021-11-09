@@ -47,8 +47,11 @@ const Page = () => {
                         align="center"
                     >
                         <Image
-                            borderColor="whiteAplha800"
-                            borderWidth={2}
+                            borderColor={useColorModeValue(
+                                "whiteAlpha.200",
+                                "whiteAlpha.500"
+                            )}
+                            borderWidth={1}
                             borderStyle="solid"
                             maxWidth="100px"
                             display="inline-block"
