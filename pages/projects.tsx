@@ -3,6 +3,8 @@ import { Container, Box, Heading, SimpleGrid, Divider } from "@chakra-ui/react";
 import { Section } from "../components/Section";
 import { GridItem } from "../components/GridItem";
 import biggbyThumbnail from "../public/images/projects/biggby.png";
+import sympleeThumbnail from "../public/images/projects/symplee.png";
+import gameOfLifeThumbnail from "../public/images/projects/gameOfLife.png";
 import { Layout } from "../components/layouts/article";
 
 const Projects = () => {
@@ -18,29 +20,29 @@ const Projects = () => {
                             id={"biggby"}
                             title="BIGGBY Online Ordering"
                             thumbnail={biggbyThumbnail}
-                            href="https://app.biggby.com"
+                            href="/biggby"
                         >
                             Online Ordering for BIGGBY
                         </GridItem>
                     </Section>
                     <Section>
                         <GridItem
-                            id={"biggby"}
-                            title="BIGGBY Online Ordering"
-                            thumbnail={biggbyThumbnail}
-                            href="/"
+                            id={"symplee"}
+                            title="Symplee"
+                            thumbnail={sympleeThumbnail}
+                            href="/symplee"
                         >
-                            Online Ordering for BIGGBY
+                            An Online Text and Video Chat Platform
                         </GridItem>
                     </Section>
                     <Section>
                         <GridItem
-                            id={"biggby"}
-                            title="BIGGBY Online Ordering"
-                            thumbnail={biggbyThumbnail}
-                            href="/"
+                            id={"gameOfLife"}
+                            title="Conway's Game of Life"
+                            thumbnail={gameOfLifeThumbnail}
+                            href="/gameOfLife"
                         >
-                            Online Ordering for BIGGBY
+                            Conway's Game of Life
                         </GridItem>
                     </Section>
                 </SimpleGrid>

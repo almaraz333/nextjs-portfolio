@@ -19,7 +19,7 @@ export const Layout: React.FC<LayoutProps> = ({ children, title }) => (
         exit="exit"
         variants={variants}
         transition={{ duration: 0.4, type: "easeInOut" }}
-        style={{ position: "relative" }}
+        style={{ position: "relative", zIndex: 1 }}
     >
         <>
             {title && (

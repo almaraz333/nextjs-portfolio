@@ -34,7 +34,7 @@ const Page = () => {
                 </Box> */}
 
                 <Box display={{ md: "flex" }}>
-                    <Box flexGrow={1}>
+                    <Box flexGrow={1} position={"relative"}>
                         <Heading as="h2" variant="page-title">
                             Colton Almaraz
                         </Heading>
@@ -60,27 +60,32 @@ const Page = () => {
                 </Box>
                 <Section delay={"0.1"}>
                     <Heading as="h3" variant={"section-title"}>
-                        Projects
+                        About Me
                     </Heading>
                     <Paragraph>
-                        blah blah blah worked on projects such as{" "}
-                        <NextLink href="/projects/SOMEPROjeCT">
-                            <Link>PROJECT NAME</Link>
-                        </NextLink>
+                        I'm a mostly remote dev who creates minimal, effective
+                        products and sometimes has a hand in designing them.
+                        Whether it's mockups, prototypes, back-end, or front-end
+                        I have the skills required to create and experience the
+                        user will never forget. I focus on products from a human
+                        perspective as well as business.
                     </Paragraph>
-                    <Box align="center"></Box>
                 </Section>
                 <Section delay={"0.2"}>
                     <Heading as="h3" variant="section-title">
                         Bio
                     </Heading>
                     <BioSection>
-                        <BioYear>1996</BioYear>
-                        Born (unfortunately)
+                        <BioYear>2020</BioYear>
+                        Graduated from Michigan State University
                     </BioSection>
                     <BioSection>
-                        <BioYear>1996</BioYear>
-                        Born (unfortunately)
+                        <BioYear>2020-2021</BioYear>
+                        Software Developer - BIGGBY coffee
+                    </BioSection>
+                    <BioSection>
+                        <BioYear>2021-</BioYear>
+                        Frontend Engineer - Source
                     </BioSection>
                 </Section>
                 <Section delay="0.3">
@@ -94,8 +99,22 @@ const Page = () => {
                                     variant="ghost"
                                     colorScheme={"red"}
                                     leftIcon={<Icon as={BsGithub} />}
+                                    href="https://github.com/almaraz333"
                                 >
-                                    @almaraz
+                                    @almaraz333
+                                </Button>
+                            </Link>
+                        </ListItem>
+
+                        <ListItem>
+                            <Link href="/" target="_blank">
+                                <Button
+                                    variant="ghost"
+                                    colorScheme={"red"}
+                                    leftIcon={<Icon as={BsGithub} />}
+                                    href="https://github.com/coltonatsource"
+                                >
+                                    @coltonatsource
                                 </Button>
                             </Link>
                         </ListItem>
@@ -106,8 +125,9 @@ const Page = () => {
                                     variant="ghost"
                                     colorScheme={"red"}
                                     leftIcon={<Icon as={BsLinkedin} />}
+                                    href="https://www.linkedin.com/in/coltonalmaraz/"
                                 >
-                                    @almaraz
+                                    @coltonalmaraz
                                 </Button>
                             </Link>
                         </ListItem>
@@ -118,8 +138,9 @@ const Page = () => {
                                     variant="ghost"
                                     colorScheme={"red"}
                                     leftIcon={<Icon as={BsInstagram} />}
+                                    href="https://www.instagram.com/almaraz333/"
                                 >
-                                    @almaraz
+                                    @almaraz333
                                 </Button>
                             </Link>
                         </ListItem>

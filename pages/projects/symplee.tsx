@@ -10,22 +10,20 @@ const Project = () => {
         <Layout title="Biggby">
             <Container>
                 <Title>
-                    Biggby <Badge>2020</Badge>
+                    Symplee <Badge>2020</Badge>
                 </Title>
                 <Paragraph>
-                    An app and web experience for the international coffee
-                    company, BIGGBY. Working on both front-end and back-end I
-                    created a platform for customers to place and order and have
-                    that order sent to a store of their choosing. All this while
-                    also keeping the user's experience in mind and making it as
-                    enjoyable as possible.
+                    A fast, intuitive, text and video chat app focused on a good
+                    user experience. Being able to communicate with friends in
+                    an efficient way while also knowing you secure while doing
+                    so was a vital idea in this project.
                 </Paragraph>
                 <Box mt={20}>
                     <List ml={4} my={4}>
                         <ListItem>
                             <Meta>Website</Meta>
                             <Link href="https://www.app.biggby.com">
-                                https://app.biggby.com{" "}
+                                https://symplee.app/
                                 <ExternalLinkIcon mx={2} />
                             </Link>
                         </ListItem>
@@ -40,8 +38,8 @@ const Project = () => {
                     </List>
 
                     <ProjectImage
-                        src="/images/projects/biggbyCheckout.png"
-                        alt="biggby"
+                        src="/images/projects/symplee.png"
+                        alt="symplee"
                     />
                 </Box>
             </Container>

@@ -10,38 +10,35 @@ const Project = () => {
         <Layout title="Biggby">
             <Container>
                 <Title>
-                    Biggby <Badge>2020</Badge>
+                    Conway's Game of Life <Badge>2021</Badge>
                 </Title>
                 <Paragraph>
-                    An app and web experience for the international coffee
-                    company, BIGGBY. Working on both front-end and back-end I
-                    created a platform for customers to place and order and have
-                    that order sent to a store of their choosing. All this while
-                    also keeping the user's experience in mind and making it as
-                    enjoyable as possible.
+                    Conway's Game of Life made in Python utilizing pyGame and
+                    Numpy. The Game of Life, also known simply as Life, is a
+                    cellular automaton devised by the British mathematician John
+                    Horton Conway in 1970. It is a zero-player game and it is
+                    Turing complete and can simulate a universal constructor or
+                    any other Turing machine.
                 </Paragraph>
                 <Box mt={20}>
                     <List ml={4} my={4}>
                         <ListItem>
                             <Meta>Website</Meta>
-                            <Link href="https://www.app.biggby.com">
-                                https://app.biggby.com{" "}
+                            <Link href="https://github.com/almaraz333/conways-game-of-life">
+                                Repo
                                 <ExternalLinkIcon mx={2} />
                             </Link>
                         </ListItem>
-                        <ListItem>
-                            <Meta>Platform</Meta>
-                            <span>Desktop/Mobile</span>
-                        </ListItem>
+
                         <ListItem>
                             <Meta>Stack</Meta>
-                            <span>NodeJS, React, Apollo, Graphql</span>
+                            <span>Python, pyGame, Numpy</span>
                         </ListItem>
                     </List>
 
                     <ProjectImage
-                        src="/images/projects/biggbyCheckout.png"
-                        alt="biggby"
+                        src="/images/projects/gameOfLife.png"
+                        alt="game of life"
                     />
                 </Box>
             </Container>

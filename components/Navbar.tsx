@@ -43,6 +43,7 @@ const Navbar = (props) => {
     return (
         <Box
             position="fixed"
+            zIndex={999}
             as="nav"
             w="100%"
             bg={useColorModeValue("#ffffff40", "#20202380")}
@@ -92,7 +93,10 @@ const Navbar = (props) => {
                                 <NextLink href="/projects" passHref>
                                     <MenuItem as={Link}>Projects</MenuItem>
                                 </NextLink>
-                                <NextLink href="/projects" passHref>
+                                <NextLink
+                                    href="https://github.com/almaraz333/nextjs-portfolio"
+                                    passHref
+                                >
                                     <MenuItem as={Link}>Source</MenuItem>
                                 </NextLink>
                             </MenuList>
