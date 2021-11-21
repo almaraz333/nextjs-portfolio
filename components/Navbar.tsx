@@ -70,7 +70,7 @@ const Navbar = (props) => {
                         alignItems="flex-start"
                         flexGrow={1}
                     >
-                        <LinkItem href="/projects" path={"path"}>
+                        <LinkItem href="/projects" path={"/projects"}>
                             Projects
                         </LinkItem>
                         <LinkItem
