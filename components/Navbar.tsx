@@ -1,5 +1,6 @@
 import { Logo } from "./Logo";
 import NextLink from "next/link";
+import { useRouter } from "next/router";
 import {
     Container,
     Box,
@@ -26,12 +27,17 @@ type LinkItemProps = {
 const LinkItem = ({ href, path, children }: LinkItemProps) => {
     const active = path === href;
     const inactiveColor = useColorModeValue("gray200", "whiteAlpha.900");
+
     return (
         <NextLink href={href}>
             <Link
                 p={2}
-                bg={active ? "glassTeal" : undefined}
-                color={active ? "#202023" : inactiveColor}
+                color={active ? "glassTeal" : inactiveColor}
+                style={{
+                    borderBottomStyle: active ? "solid" : undefined,
+                    borderBottomWidth: active ? "3px" : undefined,
+                    borderBottomColor: active ? "glassTeal" : undefined
+                }}
             >
                 {children}
             </Link>
@@ -40,6 +46,8 @@ const LinkItem = ({ href, path, children }: LinkItemProps) => {
 };
 
 const Navbar = (props) => {
+    const { pathname } = useRouter();
+
     return (
         <Box
             position="fixed"
@@ -70,12 +78,12 @@ const Navbar = (props) => {
                         alignItems="flex-start"
                         flexGrow={1}
                     >
-                        <LinkItem href="/projects" path={"/path"}>
+                        <LinkItem href="/projects" path={pathname}>
                             Projects
                         </LinkItem>
                         <LinkItem
                             href="/docs/AlmarazColton_Resume.pdf"
-                            path={"path"}
+                            path={pathname}
                         >
                             Resume
                         </LinkItem>
