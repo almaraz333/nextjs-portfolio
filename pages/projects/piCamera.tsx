@@ -24,7 +24,7 @@ const Project = () => {
                     <List ml={4} my={4}>
                         <ListItem>
                             <Meta>Stack</Meta>
-                            <span>Raspberry Pi, Pi Cam, Ranger</span>
+                            <span>Raspberry Pi, Pi Cam, Python, Ranger</span>
                         </ListItem>
                     </List>
 
