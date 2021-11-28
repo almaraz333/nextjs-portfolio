@@ -116,7 +116,7 @@ const Page = () => {
                                     variant="ghost"
                                     colorScheme={"red"}
                                     leftIcon={<Icon as={BsLinkedin} />}
-                                    href="https://www.linkedin.com/in/coltonalmaraz/"
+                                    href="https://linkedin.com/in/coltonalmaraz/"
                                 >
                                     @coltonalmaraz
                                 </Button>
@@ -129,7 +129,7 @@ const Page = () => {
                                     variant="ghost"
                                     colorScheme={"red"}
                                     leftIcon={<Icon as={BsInstagram} />}
-                                    href="https://www.instagram.com/almaraz333/"
+                                    href="https://instagram.com/almaraz333/"
                                 >
                                     @almaraz333
                                 </Button>
