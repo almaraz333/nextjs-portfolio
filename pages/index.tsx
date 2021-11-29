@@ -98,12 +98,15 @@ const Page = () => {
                     </Heading>
                     <List>
                         <ListItem>
-                            <Link href="/" target="_blank">
+                            <Link
+                                href="https://github.com/almaraz333"
+                                target="_blank"
+                            >
                                 <Button
                                     variant="ghost"
                                     colorScheme={"red"}
                                     leftIcon={<Icon as={BsGithub} />}
-                                    href="github.com/almaraz333"
+                                    href="https://github.com/almaraz333"
                                 >
                                     @almaraz333
                                 </Button>
@@ -111,12 +114,15 @@ const Page = () => {
                         </ListItem>
 
                         <ListItem>
-                            <Link href="/" target="_blank">
+                            <Link
+                                href="https://linkedin.com/in/coltonalmaraz/"
+                                target="_blank"
+                            >
                                 <Button
                                     variant="ghost"
                                     colorScheme={"red"}
                                     leftIcon={<Icon as={BsLinkedin} />}
-                                    href="linkedin.com/in/coltonalmaraz/"
+                                    href="https://linkedin.com/in/coltonalmaraz/"
                                 >
                                     @coltonalmaraz
                                 </Button>
@@ -124,12 +130,15 @@ const Page = () => {
                         </ListItem>
 
                         <ListItem>
-                            <Link href="/" target="_blank">
+                            <Link
+                                href="https://instagram.com/almaraz333/"
+                                target="_blank"
+                            >
                                 <Button
                                     variant="ghost"
                                     colorScheme={"red"}
                                     leftIcon={<Icon as={BsInstagram} />}
-                                    href="instagram.com/almaraz333/"
+                                    href="https://instagram.com/almaraz333/"
                                 >
                                     @almaraz333
                                 </Button>
