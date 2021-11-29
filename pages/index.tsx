@@ -103,7 +103,7 @@ const Page = () => {
                                     variant="ghost"
                                     colorScheme={"red"}
                                     leftIcon={<Icon as={BsGithub} />}
-                                    href="https://github.com/almaraz333"
+                                    href="github.com/almaraz333"
                                 >
                                     @almaraz333
                                 </Button>
@@ -116,7 +116,7 @@ const Page = () => {
                                     variant="ghost"
                                     colorScheme={"red"}
                                     leftIcon={<Icon as={BsLinkedin} />}
-                                    href="https://linkedin.com/in/coltonalmaraz/"
+                                    href="linkedin.com/in/coltonalmaraz/"
                                 >
                                     @coltonalmaraz
                                 </Button>
@@ -129,7 +129,7 @@ const Page = () => {
                                     variant="ghost"
                                     colorScheme={"red"}
                                     leftIcon={<Icon as={BsInstagram} />}
-                                    href="https://instagram.com/almaraz333/"
+                                    href="instagram.com/almaraz333/"
                                 >
                                     @almaraz333
                                 </Button>
