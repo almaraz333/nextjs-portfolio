@@ -24,7 +24,7 @@ const Project = () => {
                     <List ml={4} my={4}>
                         <ListItem>
                             <Meta>Website</Meta>
-                            <Link href="https://www.app.biggby.com">
+                            <Link href="https://app.biggby.com">
                                 https://app.biggby.com{" "}
                                 <ExternalLinkIcon mx={2} />
                             </Link>
