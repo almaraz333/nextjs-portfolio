@@ -37,15 +37,18 @@ const Page = () => {
                     >
                         <Image
                             borderColor={useColorModeValue(
-                                "whiteAlpha.200",
+                                "black",
                                 "whiteAlpha.500"
                             )}
-                            borderWidth={1}
+                            borderWidth={2}
                             borderStyle="solid"
                             maxWidth="100px"
                             display="inline-block"
                             borderRadius="full"
-                            src="/images/logo.png"
+                            src={useColorModeValue(
+                                "/images/logoLightMode.png",
+                                "/images/logo.png"
+                            )}
                             alt="Profile Image"
                         />
                     </Box>

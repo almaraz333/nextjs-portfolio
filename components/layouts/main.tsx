@@ -18,7 +18,7 @@ const Main: React.FC<MainProps> = ({ children, router }) => {
                 <title>Colton Almaraz - Homepage</title>
             </Head>
             <Navbar path={router.path} />
-            <Container maxW="container.md" pt={14}>
+            <Container maxW="container.md" pt={20}>
                 {children}
             </Container>
         </Box>
