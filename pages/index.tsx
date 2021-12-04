@@ -22,17 +22,6 @@ const Page = () => {
     return (
         <Layout>
             <Container>
-                {/* <Box
-                    borderRadius="5"
-                    bg={useColorModeValue("whiteAlpha.500", "whiteAlpha.200")}
-                    p={3}
-                    my={6}
-                    align="center"
-                >
-                    Hello, I'm a remote front-end engineer based in Portland,
-                    OR!
-                </Box> */}
-
                 <Box display={{ md: "flex" }}>
                     <Box flexGrow={1} position={"relative"}>
                         <Heading as="h2" variant="page-title">
