@@ -60,7 +60,8 @@ const Navbar = (props) => {
         >
             <Container
                 display="flex"
-                p={2}
+                p={1}
+                mt={2}
                 maxW="container.lg.md"
                 wrap="wrap"
                 align="center"
