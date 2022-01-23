@@ -7,25 +7,23 @@ import { Layout } from "../../components/layouts/article";
 
 const Project = () => {
     return (
-        <Layout title="Biggby">
+        <Layout title="Crypto App">
             <Container>
                 <Title>
-                    Biggby <Badge>2020</Badge>
+                    Ethereum Trading App <Badge>2022</Badge>
                 </Title>
                 <Paragraph>
-                    An app and web experience for the international coffee
-                    company, BIGGBY. Working on both front-end and back-end I
-                    created a platform for customers to place and order and have
-                    that order sent to a store of their choosing. All this while
-                    also keeping the user's experience in mind and making it as
-                    enjoyable as possible.
+                    An online Ethereum trading platform for sending and
+                    receiving crypto. Connect your ETH wallet to the app and
+                    complete transactions in real-time. With the ability to see
+                    past transactions and manage them.
                 </Paragraph>
                 <Box mt={20}>
                     <List ml={4} my={4}>
                         <ListItem>
                             <Meta>Website</Meta>
-                            <Link href="https://app.biggby.com">
-                                https://app.biggby.com{" "}
+                            <Link href="https://blockchain-app-olive.vercel.app/">
+                                https://blockchain-app-olive.vercel.app/
                                 <ExternalLinkIcon mx={2} />
                             </Link>
                         </ListItem>
@@ -36,14 +34,15 @@ const Project = () => {
                         <ListItem>
                             <Meta>Stack</Meta>
                             <span>
-                                NodeJS, React, Typescript, Apollo, Graphql
+                                NodeJS, React, Ethers, Recoil, Typescript,
+                                Tailwind, Hardhat
                             </span>
                         </ListItem>
                     </List>
 
                     <ProjectImage
-                        src="/images/projects/biggbyCheckout.png"
-                        alt="biggby"
+                        src="/images/projects/cryptoapp2.png"
+                        alt="crypto app"
                     />
                 </Box>
             </Container>
