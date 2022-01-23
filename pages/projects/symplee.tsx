@@ -33,7 +33,9 @@ const Project = () => {
                         </ListItem>
                         <ListItem>
                             <Meta>Stack</Meta>
-                            <span>NodeJS, React, Apollo, Graphql</span>
+                            <span>
+                                NodeJS, React, Typescript, Apollo, Graphql
+                            </span>
                         </ListItem>
                     </List>
 

@@ -13,6 +13,7 @@ import sympleeThumbnail from "../public/images/projects/symplee.png";
 import gameOfLifeThumbnail from "../public/images/projects/gameOfLife.png";
 import webScraperThumbnail from "../public/images/projects/webScraper.png";
 import piCameraThumbnail from "../public/images/projects/piCamera.jpg";
+import cryptoAppThumbnail from "../public/images/projects/cyrptoapp.png";
 import { Layout } from "../components/layouts/article";
 
 const Projects = () => {
@@ -62,6 +63,16 @@ const Projects = () => {
                 </Text>
 
                 <SimpleGrid columns={[1, 1, 2]} gap={6}>
+                    <Section>
+                        <GridItem
+                            id={"cryptoApp"}
+                            title="Ethereum Crypto App"
+                            thumbnail={cryptoAppThumbnail}
+                            href="/cryptoApp"
+                        >
+                            An online Ethereum trading platform
+                        </GridItem>
+                    </Section>
                     <Section>
                         <GridItem
                             id={"gameOfLife"}
