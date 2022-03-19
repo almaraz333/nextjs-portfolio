@@ -24,7 +24,13 @@ const Page = () => {
             <Container>
                 <Box display={{ md: "flex" }}>
                     <Box flexGrow={1} position={"relative"}>
-                        <Heading as="h2" variant="page-title">
+                        <Heading
+                            as="h2"
+                            variant="page-title"
+                            textDecoration="underline"
+                            textDecorationColor="#1f506e"
+                            marginBottom=".5rem"
+                        >
                             Colton Almaraz
                         </Heading>
                         Experience Architect
@@ -42,13 +48,13 @@ const Page = () => {
                             )}
                             borderWidth={2}
                             borderStyle="solid"
-                            maxWidth="100px"
+                            width="100px"
+                            height="100px"
+                            objectFit="cover"
+                            objectPosition="50% 40%"
                             display="inline-block"
                             borderRadius="full"
-                            src={useColorModeValue(
-                                "/images/logoLightMode.png",
-                                "/images/logo.png"
-                            )}
+                            src={"images/headShot.jpg"}
                             alt="Profile Image"
                         />
                     </Box>
