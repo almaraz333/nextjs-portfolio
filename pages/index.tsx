@@ -91,7 +91,7 @@ const Page = () => {
                     </BioSection>
                     <BioSection>
                         <BioYear>2021-</BioYear>
-                        UX Engineer - Ernst & Young
+                        Senior UX Engineer - Ernst & Young
                     </BioSection>
                 </Section>
                 <Section delay="0.3">
