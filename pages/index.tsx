@@ -90,8 +90,8 @@ const Page = () => {
                         Software Developer - BIGGBY coffee
                     </BioSection>
                     <BioSection>
-                        <BioYear>2021 -</BioYear>
-                        UX Engineer - Ernst & Young
+                        <BioYear>2021-</BioYear>
+                        Senior UX Engineer - Ernst & Young
                     </BioSection>
                 </Section>
                 <Section delay="0.3">
