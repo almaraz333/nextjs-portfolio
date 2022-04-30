@@ -11,7 +11,7 @@ import {
     ListItem,
     useColorModeValue
 } from "@chakra-ui/react";
-import { BsLinkedin, BsGithub, BsInstagram } from "react-icons/bs";
+import { BsLinkedin, BsGithub } from "react-icons/bs";
 
 import { Section } from "../components/Section";
 import { Paragraph } from "../components/Paragraph";
@@ -78,7 +78,7 @@ const Page = () => {
                         Bio
                     </Heading>
                     <BioSection>
-                        <BioYear>2019-2020</BioYear>
+                        <BioYear>2019 - 2020</BioYear>
                         Software Developer and UX Designer - PAHA
                     </BioSection>
                     <BioSection>
@@ -86,11 +86,11 @@ const Page = () => {
                         Graduated from Michigan State University
                     </BioSection>
                     <BioSection>
-                        <BioYear>2020-2021</BioYear>
+                        <BioYear>2020 - 2021</BioYear>
                         Software Developer - BIGGBY coffee
                     </BioSection>
                     <BioSection>
-                        <BioYear>2021-</BioYear>
+                        <BioYear>2021 -</BioYear>
                         UX Engineer - Ernst & Young
                     </BioSection>
                 </Section>
@@ -127,22 +127,6 @@ const Page = () => {
                                     href="https://linkedin.com/in/coltonalmaraz/"
                                 >
                                     @coltonalmaraz
-                                </Button>
-                            </Link>
-                        </ListItem>
-
-                        <ListItem>
-                            <Link
-                                href="https://instagram.com/almaraz333/"
-                                target="_blank"
-                            >
-                                <Button
-                                    variant="ghost"
-                                    colorScheme={"red"}
-                                    leftIcon={<Icon as={BsInstagram} />}
-                                    href="https://instagram.com/almaraz333/"
-                                >
-                                    @almaraz333
                                 </Button>
                             </Link>
                         </ListItem>
