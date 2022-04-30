@@ -82,12 +82,12 @@ const Navbar = (props) => {
                         <LinkItem href="/projects" path={pathname}>
                             Projects
                         </LinkItem>
-                        <LinkItem
-                            href="/docs/AlmarazColton_Resume.pdf"
-                            path={pathname}
+                        <Box
+                            onClick={props.openResumeModal}
+                            className="neon-button"
                         >
                             Resume
-                        </LinkItem>
+                        </Box>
                     </Stack>
                 </Flex>
 
