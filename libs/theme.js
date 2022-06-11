@@ -7,8 +7,8 @@ const styles = {
             bg: mode("#f0e7db", "#202023")(props)
         },
         fonts: {
-            heading: "Montserrat, sans-serif",
-            body: "Montserrat, sans-serif"
+            heading: "'Fira Sans', sans-serif",
+            body: "'Fira Sans', sans-serif"
         }
     })
 };
@@ -36,7 +36,7 @@ const components = {
 };
 
 const fonts = {
-    heading: "Montserrat, sans-serif"
+    heading: "'Fira Sans', sans-serif"
 };
 
 const colors = {

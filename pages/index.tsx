@@ -51,7 +51,7 @@ const Page = () => {
                 <Box
                     display={{ md: "flex" }}
                     marginBottom="5rem"
-                    marginTop="3rem"
+                    marginTop="1rem"
                 >
                     <Box flexGrow={1} position={"relative"}>
                         <Heading

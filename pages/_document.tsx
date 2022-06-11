@@ -17,7 +17,7 @@ export default class Document extends NextDocument {
                         crossOrigin="true"
                     />
                     <link
-                        href="https://fonts.googleapis.com/css2?family=Montserrat&family=Nunito&display=swap"
+                        href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@500&display=swap"
                         rel="stylesheet"
                     />
                 </Head>
