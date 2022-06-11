@@ -2,6 +2,10 @@ body{
     font-family: 'Ubuntu', sans-serif;
 }
 
+.show-less {
+    max-height: unset !important;
+}
+
 .resume-modal {
     height: 95vh;
     width: 50vw;

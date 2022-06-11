@@ -1,4 +1,4 @@
-import NextLink from "next/link";
+import { Chrono } from "react-chrono";
 import {
     Container,
     Box,
@@ -15,14 +15,44 @@ import { BsLinkedin, BsGithub } from "react-icons/bs";
 
 import { Section } from "../components/Section";
 import { Paragraph } from "../components/Paragraph";
-import { BioSection, BioYear } from "../components/Bio";
 import { Layout } from "../components/layouts/article";
 
 const Page = () => {
+    const timelineItems = [
+        {
+            title: "2019",
+            cardTitle: "Software Developer and UX Designer",
+            cardSubtitle: "Professional Athletes Healthcare Advocates",
+            cardDetailedText: "HTML, CSS, Javascript"
+        },
+        {
+            title: "2020",
+            cardTitle: "Graduated Michigan State University",
+            cardSubtitle: "Experience Architecture",
+            cardDetailedText: "Focus on UX design and front end engineering"
+        },
+        {
+            title: "2020",
+            cardTitle: "Software Engineer",
+            cardSubtitle: "BIGGBY Coffee",
+            cardDetailedText:
+                "React, Typescript, Sass, GraphQL, Apollo Client, Python, MySQL"
+        },
+        {
+            title: "2021",
+            cardTitle: "UX Engineer",
+            cardSubtitle: "Ernst & Young",
+            cardDetailedText: "React, Typescript, Sass, NX"
+        }
+    ];
     return (
         <Layout>
             <Container>
-                <Box display={{ md: "flex" }}>
+                <Box
+                    display={{ md: "flex" }}
+                    marginBottom="5rem"
+                    marginTop="3rem"
+                >
                     <Box flexGrow={1} position={"relative"}>
                         <Heading
                             as="h2"
@@ -74,25 +104,20 @@ const Page = () => {
                     </Paragraph>
                 </Section>
                 <Section delay={"0.2"}>
-                    <Heading as="h3" variant="section-title">
-                        Bio
-                    </Heading>
-                    <BioSection>
-                        <BioYear>2019 - 2020</BioYear>
-                        Software Developer and UX Designer - PAHA
-                    </BioSection>
-                    <BioSection>
-                        <BioYear>2020</BioYear>
-                        Graduated from Michigan State University
-                    </BioSection>
-                    <BioSection>
-                        <BioYear>2020 - 2021</BioYear>
-                        Software Developer - BIGGBY coffee
-                    </BioSection>
-                    <BioSection>
-                        <BioYear>2021-</BioYear>
-                        Senior UX Engineer - Ernst & Young
-                    </BioSection>
+                    <div style={{ margin: "5rem 0" }}>
+                        <Chrono
+                            hideControls={true}
+                            items={timelineItems}
+                            theme={{
+                                primary: "#4666FF",
+                                titleColor: useColorModeValue(
+                                    "black",
+                                    "whiteAlpha.500"
+                                ),
+                                secondary: "#fff"
+                            }}
+                        />
+                    </div>
                 </Section>
                 <Section delay="0.3">
                     <Heading as="h3" variant="section-title">
