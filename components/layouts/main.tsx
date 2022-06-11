@@ -30,7 +30,7 @@ const Main: React.FC<MainProps> = ({ children, router }) => {
             </Container>
             <Modal>
                 <CloseButton onClick={closeResumeModal} />
-                <iframe
+                <embed
                     height="100%"
                     width="100%"
                     src="docs/AlmarazColton_Resume.pdf"
