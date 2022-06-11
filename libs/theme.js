@@ -7,8 +7,8 @@ const styles = {
             bg: mode("#f0e7db", "#202023")(props)
         },
         fonts: {
-            heading: "Fira Sans",
-            body: "Fira Sans"
+            heading: "Montserrat, sans-serif",
+            body: "Montserrat, sans-serif"
         }
     })
 };
@@ -36,7 +36,7 @@ const components = {
 };
 
 const fonts = {
-    heading: "'M PLUS Rounded 1c'"
+    heading: "Montserrat, sans-serif"
 };
 
 const colors = {

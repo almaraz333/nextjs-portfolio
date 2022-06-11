@@ -58,8 +58,8 @@ const Page = () => {
                             as="h2"
                             variant="page-title"
                             textDecoration="underline"
-                            textDecorationColor="#1f506e"
-                            marginBottom=".5rem"
+                            textDecorationColor="#4666FF"
+                            marginBottom="1rem"
                         >
                             Colton Almaraz
                         </Heading>
