@@ -40,7 +40,7 @@ const Page = () => {
         },
         {
             title: "2021",
-            cardTitle: "UX Engineer",
+            cardTitle: "Senior Frontend Engineer",
             cardSubtitle: "Ernst & Young",
             cardDetailedText: "React, Typescript, Sass, NX"
         }
