@@ -63,7 +63,7 @@ const Page = () => {
                         >
                             Colton Almaraz
                         </Heading>
-                        Experience Architect
+                        Software Engineer
                     </Box>
                     <Box
                         flexShrink={0}
