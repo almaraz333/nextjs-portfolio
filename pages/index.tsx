@@ -94,13 +94,7 @@ const Page = () => {
                         About Me
                     </Heading>
                     <Paragraph>
-                        I am a remote developer who creates minimal, effective
-                        products, and sometime has a hand in designing them.
-                        Whether it is mockups, prototypes, back-end, or
-                        front-end, I have the technical skills required to
-                        create an unforgettable experience for the website
-                        users. I focus on services and products from an ethical
-                        standpoint as well as profitable standpoint.
+                    As a senior software engineer, I specialize in creating minimal, effective products with a focus on ethical and profitable outcomes. I excel in both designing and developing websites and applications, from mockups and prototypes to front-end and back-end implementation. My technical skills include TypeScript, React, Rust, C++, Python, and more, and I have experience with Git, CI/CD, Jest, OOP, and Agile methodologies. With a background in Experience Architecture and UX design, I prioritize user-centric design and accessibility, ensuring an unforgettable experience for website users. In my current and past roles, I have designed and developed AI-integrated data visualization tools, collaborated remotely with global clients, overseen CI/CD processes, and developed e-commerce storefronts that boosted sales by 20-30%. 
                     </Paragraph>
                 </Section>
                 <Section delay={"0.2"}>
