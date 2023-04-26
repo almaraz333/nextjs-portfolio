@@ -24,7 +24,7 @@ const Project = () => {
                     <List ml={4} my={4}>
                         <ListItem>
                             <Meta>Website</Meta>
-                            <Link href="https://github.com/almaraz333/conways-game-of-life">
+                            <Link href="https://github.com/almaraz333/conways-game-of-life" target="_blank">
                                 Repo
                                 <ExternalLinkIcon mx={2} />
                             </Link>

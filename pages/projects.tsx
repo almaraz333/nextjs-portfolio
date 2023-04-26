@@ -14,6 +14,7 @@ import gameOfLifeThumbnail from "../public/images/projects/gameOfLife.png";
 import webScraperThumbnail from "../public/images/projects/webScraper.png";
 import piCameraThumbnail from "../public/images/projects/piCamera.jpg";
 import cryptoAppThumbnail from "../public/images/projects/cyrptoapp.png";
+import eyBlogThumbnail from "../public/images/projects/eyBlog.png"
 import { Layout } from "../components/layouts/article";
 
 const Projects = () => {
@@ -24,6 +25,17 @@ const Projects = () => {
                     Professional
                 </Text>
                 <SimpleGrid columns={[1, 1, 2]} gap={6}>
+                <Section>
+                        <GridItem
+                            id={"eyBlog"}
+                            title="EY Blog"
+                            thumbnail={eyBlogThumbnail}
+                            href="/ey-blog"
+                        >
+                            New blog designed for and by EY Studios
+                        </GridItem>
+                    </Section>
+
                     <Section>
                         <GridItem
                             id={"biggby"}

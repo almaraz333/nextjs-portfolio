@@ -23,7 +23,7 @@ const Project = () => {
                     <List ml={4} my={4}>
                         <ListItem>
                             <Meta>Website</Meta>
-                            <Link href="https://github.com/almaraz333/Sports-Web-Scraper">
+                            <Link href="https://github.com/almaraz333/Sports-Web-Scraper" target="_blank">
                                 Repo
                                 <ExternalLinkIcon mx={2} />
                             </Link>
