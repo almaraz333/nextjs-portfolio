@@ -33,7 +33,7 @@ const Main: React.FC<MainProps> = ({ children, router }) => {
                 <embed
                     height="100%"
                     width="100%"
-                    src="docs/AlmarazColton_Resume.pdf"
+                    src="https://www.coltonalmaraz.com/docs/AlmarazColton_Resume.pdf"
                 />
             </Modal>
         </Box>
