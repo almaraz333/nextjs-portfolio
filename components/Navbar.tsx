@@ -90,7 +90,7 @@ const Navbar = ({openResumeModal, ...rest}) => {
                     </Stack>
                 </Flex>
 
-                <Box flex={1} align="right">
+                <Box flex={1} textAlign="right">
                     <ThemeToggle />
                     <Box ml={2} display={{ base: "inline-block", md: "none" }}>
                         <Menu>

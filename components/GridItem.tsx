@@ -1,11 +1,11 @@
 import NextLink from "next/link";
 import Image from "next/image";
-import { Box, Text, LinkBox, LinkOverlay } from "@chakra-ui/react";
+import { Box, Text, LinkBox } from "@chakra-ui/react";
 import { Global } from "@emotion/react";
 
-export const GridItem = ({ children, id, href, title, thumbnail }) => {
+export const GridItem = ({ children, id, title, thumbnail }) => {
     return (
-        <Box w="100%" align="center">
+        <Box w="100%" textAlign="center">
             <NextLink href={`/projects/${id}`}>
                 <LinkBox cursor={"pointer"}>
                     <Image

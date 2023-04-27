@@ -10,10 +10,10 @@ const Project = () => {
         <Layout title="Biggby">
             <Container>
                 <Title>
-                    Conway's Game of Life <Badge>2021</Badge>
+                    Conway&apos;s Game of Life <Badge>2021</Badge>
                 </Title>
                 <Paragraph>
-                    Conway's Game of Life made in Python utilizing pyGame and
+                    Conway&apos;s Game of Life made in Python utilizing pyGame and
                     Numpy. The Game of Life, also known simply as Life, is a
                     cellular automaton devised by the British mathematician John
                     Horton Conway in 1970. It is a zero-player game and it is

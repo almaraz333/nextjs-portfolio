@@ -17,7 +17,7 @@ const Project = () => {
                     company, BIGGBY. Working on both front-end and back-end I
                     created a platform for customers to place and order and have
                     that order sent to a store of their choosing. All this while
-                    also keeping the user's experience in mind and making it as
+                    also keeping the user&apos;s experience in mind and making it as
                     enjoyable as possible.
                 </Paragraph>
                 <Box mt={20}>

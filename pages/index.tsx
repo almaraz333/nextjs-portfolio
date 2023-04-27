@@ -69,7 +69,7 @@ const Page = () => {
                         flexShrink={0}
                         mt={{ base: 4, md: 0 }}
                         ml={{ md: 6 }}
-                        align="center"
+                        textAlign="center"
                     >
                         <Image
                             borderColor={useColorModeValue(
@@ -127,7 +127,6 @@ const Page = () => {
                                     variant="ghost"
                                     colorScheme={"red"}
                                     leftIcon={<Icon as={BsGithub} />}
-                                    href="https://github.com/almaraz333"
                                 >
                                     @almaraz333
                                 </Button>
@@ -143,7 +142,7 @@ const Page = () => {
                                     variant="ghost"
                                     colorScheme={"red"}
                                     leftIcon={<Icon as={BsLinkedin} />}
-                                    href="https://linkedin.com/in/coltonalmaraz/"
+                                    
                                 >
                                     @coltonalmaraz
                                 </Button>

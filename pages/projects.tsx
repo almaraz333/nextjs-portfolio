@@ -1,6 +1,5 @@
 import {
     Container,
-    Heading,
     SimpleGrid,
     Divider,
     Text
@@ -30,7 +29,6 @@ const Projects = () => {
                             id={"eyBlog"}
                             title="EY Blog"
                             thumbnail={eyBlogThumbnail}
-                            href="/ey-blog"
                         >
                             New blog designed for and by EY Studios
                         </GridItem>
@@ -41,7 +39,6 @@ const Projects = () => {
                             id={"biggby"}
                             title="BIGGBY Online Ordering"
                             thumbnail={biggbyThumbnail}
-                            href="/biggby"
                         >
                             Online Ordering for BIGGBY
                         </GridItem>
@@ -52,7 +49,6 @@ const Projects = () => {
                             id={"webScraper"}
                             title="Sports Web Scraper"
                             thumbnail={webScraperThumbnail}
-                            href="/webScraper"
                         >
                             A Python web scraper aimed at collecting sports data
                         </GridItem>
@@ -63,7 +59,6 @@ const Projects = () => {
                             id={"symplee"}
                             title="Symplee"
                             thumbnail={sympleeThumbnail}
-                            href="/symplee"
                         >
                             An Online Text and Video Chat Platform
                         </GridItem>
@@ -80,7 +75,6 @@ const Projects = () => {
                             id={"cryptoApp"}
                             title="Ethereum Crypto App"
                             thumbnail={cryptoAppThumbnail}
-                            href="/cryptoApp"
                         >
                             An online Ethereum trading platform
                         </GridItem>
@@ -90,9 +84,8 @@ const Projects = () => {
                             id={"gameOfLife"}
                             title="Conway's Game of Life"
                             thumbnail={gameOfLifeThumbnail}
-                            href="/gameOfLife"
                         >
-                            Conway's Game of Life
+                            Conway&apos;s Game of Life
                         </GridItem>
                     </Section>
 
@@ -101,7 +94,6 @@ const Projects = () => {
                             id={"piCamera"}
                             title="Pi Camera"
                             thumbnail={piCameraThumbnail}
-                            href="/piCamera"
                         >
                             A surveillance camera to keep an eye on my dog
                         </GridItem>

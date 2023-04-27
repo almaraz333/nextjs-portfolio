@@ -13,7 +13,7 @@ const Project = () => {
                     Ethereum Trading App <Badge>2022</Badge>
                 </Title>
                 <Paragraph>
-                Developed an Etherium trading app, an online Ethereum trading platform that enables users to effortlessly send and receive cryptocurrency. By integrating with users' ETH wallets, the platform facilitates real-time transactions, providing a secure and efficient trading experience. 
+                Developed an Etherium trading app, an online Ethereum trading platform that enables users to effortlessly send and receive cryptocurrency. By integrating with users&apos; ETH wallets, the platform facilitates real-time transactions, providing a secure and efficient trading experience. 
                 </Paragraph>
                 <Box mt={20}>
                     <List ml={4} my={4}>
