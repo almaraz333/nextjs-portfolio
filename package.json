@@ -32,5 +32,8 @@
         "eslint": "^8.2.0",
         "prettier": "^2.4.1",
         "tsconfig.json": "^1.0.10"
+    },
+    "engines": {
+        "node": "16.19.0"
     }
 }
