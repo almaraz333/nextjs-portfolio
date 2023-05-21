@@ -66,7 +66,9 @@ const Page = () => {
                         >
                             Colton Almaraz
                         </Heading>
+                        <Heading as="h3" fontSize="1.3rem">
                         Software Engineer
+                        </Heading>
                     </Box>
                     <Box
                         flexShrink={0}
