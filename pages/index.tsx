@@ -83,8 +83,8 @@ const Page = () => {
                             )}
                             borderWidth={2}
                             borderStyle="solid"
-                            width="100px"
-                            height="100px"
+                            width="10rem"
+                            height="10rem"
                             objectFit="cover"
                             objectPosition="50% 40%"
                             display="inline-block"
