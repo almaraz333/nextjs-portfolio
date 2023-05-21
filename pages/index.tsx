@@ -16,8 +16,11 @@ import { BsLinkedin, BsGithub } from "react-icons/bs";
 import { Section } from "../components/Section";
 import { Paragraph } from "../components/Paragraph";
 import { Layout } from "../components/layouts/article";
+import Lottie from "lottie-react";
+import TechLottie from '../public/images/tech.json'
 
 const Page = () => {
+
     const timelineItems = [
         {
             title: "2019",
@@ -89,6 +92,7 @@ const Page = () => {
                         />
                     </Box>
                 </Box>
+                <Lottie style={{paddingBottom: "2rem"}} animationData={TechLottie} loop={true} />
                 <Section delay={"0.1"}>
                     <Heading as="h3" variant={"section-title"}>
                         About Me
