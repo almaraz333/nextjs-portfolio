@@ -17,10 +17,9 @@ import { Section } from "../components/Section";
 import { Paragraph } from "../components/Paragraph";
 import { Layout } from "../components/layouts/article";
 import Lottie from "lottie-react";
-import TechLottie from '../public/images/tech.json'
+import TechLottie from "../public/images/tech.json";
 
 const Page = () => {
-
     const timelineItems = [
         {
             title: "2019",
@@ -36,14 +35,14 @@ const Page = () => {
         },
         {
             title: "2020",
-            cardTitle: "Software Engineer",
+            cardTitle: "Full Stack Software Engineer",
             cardSubtitle: "BIGGBY Coffee",
             cardDetailedText:
                 "React, Typescript, Sass, GraphQL, Apollo Client, Python, MySQL"
         },
         {
             title: "2021",
-            cardTitle: "Senior Software Engineer",
+            cardTitle: "Senior Full Stack Software Engineer",
             cardSubtitle: "Ernst & Young",
             cardDetailedText: "React, Typescript, Sass, NX"
         }
@@ -67,7 +66,7 @@ const Page = () => {
                             Colton Almaraz
                         </Heading>
                         <Heading as="h3" fontSize="1.3rem">
-                        Software Engineer
+                            Full Stack Software Engineer
                         </Heading>
                     </Box>
                     <Box
@@ -94,13 +93,32 @@ const Page = () => {
                         />
                     </Box>
                 </Box>
-                <Lottie style={{paddingBottom: "2rem"}} animationData={TechLottie} loop={true} />
+                <Lottie
+                    style={{ paddingBottom: "2rem" }}
+                    animationData={TechLottie}
+                    loop={true}
+                />
                 <Section delay={"0.1"}>
                     <Heading as="h3" variant={"section-title"}>
                         About Me
                     </Heading>
                     <Paragraph>
-                    As a senior software engineer, I specialize in creating minimal, effective products with a focus on ethical and profitable outcomes. I excel in both designing and developing websites and applications, from mockups and prototypes to front-end and back-end implementation. My technical skills include TypeScript, React, Rust, C++, Python, and more, and I have experience with Git, CI/CD, Jest, OOP, and Agile methodologies. With a background in Experience Architecture and UX design, I prioritize user-centric design and accessibility, ensuring an unforgettable experience for website users. In my current and past roles, I have designed and developed AI-integrated data visualization tools, collaborated remotely with global clients, overseen CI/CD processes, and developed e-commerce storefronts that boosted sales by 20-30%. 
+                        As a senior full stack software engineer, I specialize
+                        in creating minimal, effective products with a focus on
+                        ethical and profitable outcomes. I excel in both
+                        designing and developing websites and applications, from
+                        mockups and prototypes to front-end and back-end
+                        implementation. My technical skills include TypeScript,
+                        React, Rust, C++, Python, and more, and I have
+                        experience with Git, CI/CD, Jest, OOP, and Agile
+                        methodologies. With a background in Experience
+                        Architecture and UX design, I prioritize user-centric
+                        design and accessibility, ensuring an unforgettable
+                        experience for website users. In my current and past
+                        roles, I have designed and developed AI-integrated data
+                        visualization tools, collaborated remotely with global
+                        clients, overseen CI/CD processes, and developed
+                        e-commerce storefronts that boosted sales by 20-30%.
                     </Paragraph>
                 </Section>
                 <Section delay={"0.2"}>
@@ -148,7 +166,6 @@ const Page = () => {
                                     variant="ghost"
                                     colorScheme={"red"}
                                     leftIcon={<Icon as={BsLinkedin} />}
-                                    
                                 >
                                     @coltonalmaraz
                                 </Button>
