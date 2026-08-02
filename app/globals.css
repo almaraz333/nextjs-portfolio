@@ -30,6 +30,27 @@
     --font-body: var(--font-varela), ui-rounded, system-ui, sans-serif;
 }
 
+/* Shared layout metrics (consumed as e.g. h-(--wii-bar-height)). */
+:root {
+    --wii-bar-height: 4.25rem;
+}
+
+@media (min-width: 640px) {
+    :root {
+        --wii-bar-height: 5rem;
+    }
+}
+
+/* Visible Wii-blue focus ring everywhere; components may add glow on top. */
+:focus-visible {
+    outline: 3px solid var(--color-wii-blue);
+    outline-offset: 2px;
+}
+
+::selection {
+    background: var(--color-wii-blue-soft);
+}
+
 html {
     height: 100%;
 }

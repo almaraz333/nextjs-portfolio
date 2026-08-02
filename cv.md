@@ -73,3 +73,33 @@
 - **EY Blog** — A contemporary, responsive blog platform for EY studios worldwide, catering to a diverse audience of tens of thousands of readers across various devices
 - **Carter Treehouse** — An Airbnb site made with a fully custom, from-scratch CMS system utilizing Google APIs
 - **Biggby Online Ordering** — An intuitive online ordering app for a modern experience, enhancing user satisfaction
+
+---
+
+## Addendum — content from the previous coltonalmaraz.com (authored by Colton)
+
+> Everything below was written and published by Colton on the prior version of this site
+> (preserved in git history). Facts here may be used on the new site. Where the résumé PDF
+> and this addendum disagree on dates/titles, the résumé PDF governs.
+
+### Early experience
+
+- **Professional Athletes Healthcare Advocates — Software Developer and UX Designer (2019)** — HTML, CSS, JavaScript
+
+### Project details & links
+
+- **Biggby Online Ordering (2020)** — Seamless app + web ordering experience for BIGGBY Coffee: customers place an order and send it to a store of their choosing, with a strong focus on UX across devices. Live: https://app.biggby.com · Stack: NodeJS, React, TypeScript, Apollo, GraphQL · Image: /images/projects/biggby.png, /images/projects/biggbyCheckout.png
+- **EY Blog (2022)** — Revitalized the EY Studios blog for tens of thousands of readers across devices; modern responsive UX. Live: https://studio.ey.com/blog/study-halls/ · Stack: HTML, JS, Greensock, 11ty · Image: /images/projects/eyBlog.png, /images/projects/eyBlogHomepage.png
+- **Krypt / Ethereum Trading App (2022)** — Online Ethereum platform to send and receive crypto by integrating with users' ETH wallets for real-time transactions. Live: https://blockchain-app-olive.vercel.app/ · Stack: NodeJS, React, Ethers, Recoil, TypeScript, Tailwind, Hardhat · Image: /images/projects/cyrptoapp.png, /images/projects/cryptoapp2.png
+- **Symplee (2020)** — Fast, intuitive text + video chat app focused on good UX and security. Live: https://symplee.app/ · Stack: NodeJS, React, TypeScript, Apollo, GraphQL · Image: /images/projects/symplee.png
+- **Sports Web Scraper (2019)** — For a small sports-related insurance company: scraped, formatted, and presented player data across major national sports. Repo: https://github.com/almaraz333/Sports-Web-Scraper · Stack: Python, BeautifulSoup, Pandas · Image: /images/projects/webScraper.png, /images/projects/proFootballRef.png
+- **Conway's Game of Life (2021)** — Cellular automaton implementation. Repo: https://github.com/almaraz333/conways-game-of-life · Stack: Python, pyGame, NumPy · Image: /images/projects/gameOfLife.png
+- **Pi Dog Surveillance Camera (2021)** — Raspberry Pi cam streaming to a second Pi set up as a server, to check on his dog Ranger from his phone while away. Stack: Raspberry Pi, Pi Cam, Python · Image: /images/projects/piCamera.jpg, /images/projects/Ranger.jpg
+
+### Old "About Me" (Colton's own words, for tone reference)
+
+"As a senior full stack software engineer, I specialize in creating minimal, effective products with a focus on ethical and profitable outcomes. … With a background in Experience Architecture and UX design, I prioritize user-centric design and accessibility. In my current and past roles, I have designed and developed AI-integrated data visualization tools, collaborated remotely with global clients, overseen CI/CD processes, and developed e-commerce storefronts that boosted sales by 20–30%."
+
+### Assets available in /public/images
+
+- headShot.jpg (profile photo) · logo.png, logoLightMode.png (old logos) · projects/* (screenshots listed above)
