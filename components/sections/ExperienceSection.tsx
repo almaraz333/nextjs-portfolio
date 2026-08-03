@@ -16,18 +16,6 @@ interface TimelineEntry {
 
 const ENTRIES: TimelineEntry[] = [
     {
-        role: "Lead Full Stack Software Engineer",
-        org: "RangerCode (Founder)",
-        dates: "06/2022 – Present",
-        location: "Portland, OR",
-        current: true,
-        bullets: [
-            "Develop custom solutions for clients using Svelte, React, Redux, TypeScript, TailwindCSS, GraphQL, and AWS",
-            "Design and develop robust backend systems in Python and Go to efficiently handle data and create a smooth user experience",
-            "Oversee CI/CD processes, design teams, and vital business operations to guarantee optimal customer experience"
-        ]
-    },
-    {
         role: "Senior Full Stack Software Engineer",
         org: "EY",
         dates: "01/2022 – Present",
@@ -38,6 +26,18 @@ const ENTRIES: TimelineEntry[] = [
             "Debug and build scalable Go and Python backend systems to support custom React TypeScript user-first front-ends",
             "Performed code reviews and mentored team members to uphold code quality standards and promote professional development",
             "Optimized Docker and Azure DevOps pipelines to enhance engineer efficiency and product quality"
+        ]
+    },
+    {
+        role: "Lead Full Stack Software Engineer",
+        org: "RangerCode (Founder)",
+        dates: "06/2022 – Present",
+        location: "Portland, OR",
+        current: true,
+        bullets: [
+            "Develop custom solutions for clients using Svelte, React, Redux, TypeScript, TailwindCSS, GraphQL, and AWS",
+            "Design and develop robust backend systems in Python and Go to efficiently handle data and create a smooth user experience",
+            "Oversee CI/CD processes, design teams, and vital business operations to guarantee optimal customer experience"
         ]
     },
     {

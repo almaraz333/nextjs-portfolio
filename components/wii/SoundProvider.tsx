@@ -4,6 +4,7 @@ import {
     createContext,
     useCallback,
     useContext,
+    useEffect,
     useMemo,
     useSyncExternalStore
 } from "react";
@@ -79,6 +80,35 @@ export default function SoundProvider({
         getSnapshot,
         getServerSnapshot
     );
+
+    /*
+     * A preference restored from localStorage cannot unlock WebAudio on its
+     * own — browsers only resume an AudioContext from a user gesture. Without
+     * this, a returning visitor sees the speaker "on" but hears nothing until
+     * they toggle it off and back on. Prime the context on their first real
+     * interaction instead. (Hover is not an activation gesture, so the very
+     * first hover blip may still be silent; the next one is not.)
+     */
+    useEffect(() => {
+        if (!enabled) {
+            return undefined;
+        }
+        const events = ["pointerdown", "keydown", "touchstart"] as const;
+        const unlock = () => {
+            primeAudio();
+            for (const event of events) {
+                window.removeEventListener(event, unlock);
+            }
+        };
+        for (const event of events) {
+            window.addEventListener(event, unlock, { passive: true });
+        }
+        return () => {
+            for (const event of events) {
+                window.removeEventListener(event, unlock);
+            }
+        };
+    }, [enabled]);
 
     const toggle = useCallback(() => {
         const next = !getSnapshot();
