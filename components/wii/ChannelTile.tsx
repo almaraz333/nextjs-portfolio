@@ -4,7 +4,7 @@ import { motion, useReducedMotion } from "framer-motion";
 
 import { CHANNEL_ICONS } from "@/components/wii/icons";
 import { useSound } from "@/components/wii/SoundProvider";
-import type { Channel, ChannelSlug } from "@/lib/channels";
+import type { Channel } from "@/lib/channels";
 
 interface ChannelTileProps {
     channel: Channel;
@@ -15,9 +15,6 @@ interface ChannelTileProps {
     onTileFocus: () => void;
     tileRef: (el: HTMLButtonElement | null) => void;
 }
-
-/** Tiles with a soft blue-tinted face, for Wii-menu variety. */
-const TINTED: ReadonlySet<ChannelSlug> = new Set(["disc", "ai-lab", "contact"]);
 
 const SPRING = { type: "spring", stiffness: 340, damping: 26 } as const;
 
@@ -71,12 +68,6 @@ export default function ChannelTile({
                           }
                 }
             >
-                {TINTED.has(channel.slug) && (
-                    <span
-                        aria-hidden="true"
-                        className="pointer-events-none absolute inset-0 bg-linear-to-b from-transparent via-wii-blue-soft/15 to-wii-blue-soft/45"
-                    />
-                )}
                 <span className="relative flex flex-1 items-center justify-center">
                     <Icon className="h-10 w-10 sm:h-12 sm:w-12" />
                 </span>
