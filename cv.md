@@ -67,6 +67,14 @@
 
 ## Projects
 
+### Spotlight (verified from Colton's GitHub, August 2026 — highlight these first)
+
+- **Post-Quantum Encryption** (2026) — In-browser file encryption built on the NIST post-quantum standard **ML-KEM (Kyber)** for key encapsulation, paired with AES-GCM and ChaCha20-Poly1305 authenticated encryption. The crypto core is written in **Go and compiled to WebAssembly**, exposing `EncryptFile`/`DecryptFile` directly to the browser (files never need to leave the machine unencrypted); a Go HTTP backend serves the app, with a React Router + TypeScript frontend (Dockerized). Repos: https://github.com/almaraz333/post-quantum-encryption-backend · https://github.com/almaraz333/post-quantum-encryption-frontend · Stack: Go, WebAssembly, ML-KEM (Kyber), AES-GCM, ChaCha20-Poly1305, React Router, TypeScript, Docker
+- **Goal Tracker** (2025–2026, active) — Cross-platform goal-tracking app built with **Expo React Native + TypeScript** (migrated from a Vite + Capacitor implementation, kept as legacy reference), with a month/day calendar flow, Zustand state management, AsyncStorage persistence, and an **EAS Build/Submit pipeline targeting iOS and Android** (TestFlight / Play Internal Testing checklists in repo). Live web demo: https://goal-tracker-ten-alpha.vercel.app · Repo: https://github.com/almaraz333/goal-tracker · Stack: Expo, React Native, TypeScript, Zustand, AsyncStorage, EAS
+- **Drive Sync** (2024) — Google Drive sync tool written in **Go**, using the Google Drive API with **goroutines for concurrent downloads**; recursively traverses the Drive file tree and replicates the directory structure on local disk. Repo: https://github.com/almaraz333/driveSync · Stack: Go, Google Drive API
+
+### From the résumé PDF
+
 - **Drive Sync** — Developed a Google Drive sync tool written in Go, automating the recursive search and download of Google Drive file trees to local disk, improving data accessibility and workflow efficiency
 - **Finance Tracking Microservices** — Led the design and development of a collection of microservices using Go, gRPC, and SQLite to create and manage financial records, enhancing automation and efficiency in financial processes
 - **Krypt** — A cryptocurrency app using React, TypeScript, and Tailwind, allowing users to manage real crypto transfers

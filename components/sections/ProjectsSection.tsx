@@ -12,9 +12,10 @@ import webScraper from "@/public/images/projects/webScraper.png";
 import { ExternalLink, StackList } from "./ui";
 
 /**
- * Projects Channel — every project from cv.md (Projects list + addendum
- * project details). Descriptions are tightened cv.md wording; years, links,
- * stacks, and screenshots come straight from the addendum.
+ * Projects Channel — every project from cv.md (Spotlight from Colton's
+ * GitHub, plus the Projects list + addendum project details). Descriptions
+ * are tightened cv.md wording; years, links, stacks, and screenshots come
+ * straight from cv.md.
  */
 
 interface Project {
@@ -34,7 +35,69 @@ interface Project {
     monogram?: string;
     live?: string;
     repo?: string;
+    /** Extra labeled links (e.g. a second repo). */
+    moreLinks?: { href: string; label: string }[];
+    /** Highlighted card treatment for the Spotlight row. */
+    spotlight?: boolean;
 }
+
+const SPOTLIGHT_PROJECTS: Project[] = [
+    {
+        name: "Post-Quantum Encryption",
+        year: "2026",
+        description:
+            "In-browser file encryption built on the NIST post-quantum standard ML-KEM (Kyber), paired with AES-GCM and ChaCha20-Poly1305 authenticated encryption — the crypto core is written in Go and compiled to WebAssembly, so files are encrypted right in the browser.",
+        stack: [
+            "Go",
+            "WebAssembly",
+            "ML-KEM (Kyber)",
+            "AES-GCM",
+            "ChaCha20-Poly1305",
+            "TypeScript",
+            "Docker"
+        ],
+        monogram: "PQ",
+        spotlight: true,
+        moreLinks: [
+            {
+                href: "https://github.com/almaraz333/post-quantum-encryption-backend",
+                label: "Backend repo"
+            },
+            {
+                href: "https://github.com/almaraz333/post-quantum-encryption-frontend",
+                label: "Frontend repo"
+            }
+        ]
+    },
+    {
+        name: "Goal Tracker",
+        year: "2025–2026",
+        description:
+            "Cross-platform goal tracker built with Expo React Native — a month/day calendar flow with Zustand state and AsyncStorage persistence, shipping to iOS and Android through an EAS Build/Submit pipeline.",
+        stack: [
+            "Expo",
+            "React Native",
+            "TypeScript",
+            "Zustand",
+            "AsyncStorage",
+            "EAS"
+        ],
+        monogram: "GT",
+        spotlight: true,
+        live: "https://goal-tracker-ten-alpha.vercel.app",
+        repo: "https://github.com/almaraz333/goal-tracker"
+    },
+    {
+        name: "Drive Sync",
+        year: "2024",
+        description:
+            "A Google Drive sync tool written in Go — goroutines download files concurrently while the tool recursively traverses the Drive file tree and replicates its directory structure on local disk.",
+        stack: ["Go", "Google Drive API", "Goroutines"],
+        monogram: "DS",
+        spotlight: true,
+        repo: "https://github.com/almaraz333/driveSync"
+    }
+];
 
 const CLIENT_PROJECTS: Project[] = [
     {
@@ -123,13 +186,6 @@ const PERSONAL_PROJECTS: Project[] = [
         monogram: "FT"
     },
     {
-        name: "Drive Sync",
-        description:
-            "A Google Drive sync tool written in Go — automates the recursive search and download of Google Drive file trees to local disk.",
-        stack: ["Go"],
-        monogram: "DS"
-    },
-    {
         name: "Conway’s Game of Life",
         year: "2021",
         description: "A classic cellular automaton implementation.",
@@ -157,8 +213,19 @@ const PERSONAL_PROJECTS: Project[] = [
 
 function ProjectCard({ project }: { project: Project }) {
     return (
-        <li className="flex flex-col overflow-hidden rounded-channel border border-wii-line bg-wii-white shadow-wii-sm transition hover:shadow-wii">
+        <li
+            className={`flex flex-col overflow-hidden rounded-channel border bg-wii-white shadow-wii-sm transition ${
+                project.spotlight
+                    ? "border-wii-blue-soft hover:shadow-wii-glow"
+                    : "border-wii-line hover:shadow-wii"
+            }`}
+        >
             <div className="relative aspect-[16/10] w-full overflow-hidden border-b border-wii-line bg-wii-bg-light">
+                {project.spotlight && (
+                    <span className="absolute top-3 left-3 z-10 rounded-full border border-wii-blue-soft bg-wii-white/90 px-2.5 py-0.5 font-display text-[10px] font-medium tracking-[0.14em] text-wii-blue-deep uppercase">
+                        Spotlight
+                    </span>
+                )}
                 {project.image ? (
                     <Image
                         src={project.image.src}
@@ -178,7 +245,11 @@ function ProjectCard({ project }: { project: Project }) {
                 ) : (
                     <div
                         aria-hidden="true"
-                        className="grid h-full w-full place-items-center bg-linear-to-b from-wii-bg-light to-wii-bg"
+                        className={`grid h-full w-full place-items-center bg-linear-to-b ${
+                            project.spotlight
+                                ? "from-wii-blue-soft/25 to-wii-blue-soft/50"
+                                : "from-wii-bg-light to-wii-bg"
+                        }`}
                     >
                         <span className="grid h-16 w-16 place-items-center rounded-full border border-wii-line bg-wii-white font-display text-xl font-medium text-wii-blue-deep shadow-wii-sm">
                             {project.monogram}
@@ -204,7 +275,7 @@ function ProjectCard({ project }: { project: Project }) {
                     label={`${project.name} tech stack`}
                     items={project.stack}
                 />
-                {(project.live || project.repo) && (
+                {(project.live || project.repo || project.moreLinks) && (
                     <div className="mt-auto flex flex-wrap gap-2 pt-1">
                         {project.live && (
                             <ExternalLink href={project.live}>
@@ -216,6 +287,11 @@ function ProjectCard({ project }: { project: Project }) {
                                 Source code
                             </ExternalLink>
                         )}
+                        {project.moreLinks?.map(link => (
+                            <ExternalLink key={link.href} href={link.href}>
+                                {link.label}
+                            </ExternalLink>
+                        ))}
                     </div>
                 )}
             </div>
@@ -226,6 +302,20 @@ function ProjectCard({ project }: { project: Project }) {
 export default function ProjectsSection() {
     return (
         <div className="mx-auto flex w-full max-w-4xl flex-col gap-8">
+            <section>
+                <h3 className="font-display text-lg font-medium tracking-wide text-wii-text sm:text-xl">
+                    Spotlight
+                </h3>
+                <p className="mt-1 text-sm text-wii-text/60">
+                    The current headliners — fresh from GitHub.
+                </p>
+                <ul className="mt-4 grid list-none gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                    {SPOTLIGHT_PROJECTS.map(project => (
+                        <ProjectCard key={project.name} project={project} />
+                    ))}
+                </ul>
+            </section>
+
             <section>
                 <h3 className="font-display text-lg font-medium tracking-wide text-wii-text sm:text-xl">
                     Client &amp; Professional
