@@ -137,18 +137,20 @@ function TimelineCard({ entry }: { entry: TimelineEntry }) {
 
 export default function ExperienceSection() {
     return (
-        <ol className="relative mx-auto flex w-full max-w-3xl list-none flex-col gap-5 pl-8 sm:gap-6">
-            {/* Blue spine */}
+        <div className="relative mx-auto w-full max-w-3xl pl-8">
+            {/* Blue spine (outside the <ol> — only <li> may be a list child) */}
             <div
                 aria-hidden="true"
                 className="absolute top-3 bottom-3 left-2.5 w-1 rounded-full bg-linear-to-b from-wii-blue via-wii-blue-soft to-wii-blue-soft"
             />
-            {ENTRIES.map(entry => (
-                <TimelineCard
-                    key={`${entry.org}-${entry.dates}`}
-                    entry={entry}
-                />
-            ))}
-        </ol>
+            <ol className="flex list-none flex-col gap-5 sm:gap-6">
+                {ENTRIES.map(entry => (
+                    <TimelineCard
+                        key={`${entry.org}-${entry.dates}`}
+                        entry={entry}
+                    />
+                ))}
+            </ol>
+        </div>
     );
 }

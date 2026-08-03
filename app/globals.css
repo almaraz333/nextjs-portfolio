@@ -67,3 +67,23 @@ body {
     font-family: var(--font-body);
     -webkit-font-smoothing: antialiased;
 }
+
+/* Mii parade keyframes (components/wii/MiiParade.tsx): a one-way stroll
+   across the viewport plus a gentle per-figure walking bob. */
+@keyframes wii-parade-walk {
+    from {
+        transform: translateX(-7rem);
+    }
+    to {
+        transform: translateX(calc(100vw + 3rem));
+    }
+}
+
+@keyframes wii-parade-bob {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-3px);
+    }
+}

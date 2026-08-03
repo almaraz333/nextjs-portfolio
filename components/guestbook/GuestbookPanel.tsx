@@ -176,9 +176,9 @@ export default function GuestbookPanel() {
             </div>
 
             <header className="mb-4 text-center">
-                <h2 className="font-display text-2xl text-wii-blue-deep">
+                <h3 className="font-display text-2xl text-wii-blue-deep">
                     Guestbook
-                </h2>
+                </h3>
                 <p className="mt-1 font-body text-sm text-wii-text/70">
                     Leave a note — every entry is stored for real.
                 </p>
