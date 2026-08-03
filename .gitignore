@@ -4,12 +4,5 @@ dist
 .vercel
 .enc
 
-# local database files (guestbook / visitor counter)
-.data/
-*.db
-*.db-journal
-*.db-wal
-*.db-shm
-
 # TypeScript incremental cache
 tsconfig.tsbuildinfo

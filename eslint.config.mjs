@@ -3,16 +3,10 @@ import typescript from "eslint-config-next/typescript";
 
 const eslintConfig = [
     {
-        ignores: [
-            ".next/**",
-            "node_modules/**",
-            ".data/**",
-            "next-env.d.ts",
-            "public/**",
-        ],
+        ignores: [".next/**", "node_modules/**", "next-env.d.ts", "public/**"]
     },
     ...coreWebVitals,
-    ...typescript,
+    ...typescript
 ];
 
 export default eslintConfig;

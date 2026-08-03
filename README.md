@@ -1,16 +1,13 @@
 # The Colton Channel
 
-The personal portfolio of Colton Almaraz ([coltonalmaraz.com](https://coltonalmaraz.com)), styled as a Nintendo Wii Menu: a grid of channels, a glossy bottom bar with a live clock, synthesized UI blips, a real guestbook, and a real visitor counter. And at least one secret.
+The personal portfolio of Colton Almaraz ([coltonalmaraz.com](https://coltonalmaraz.com)), styled as a Nintendo Wii Menu: a grid of channels, a glossy bottom bar with a live clock, and synthesized UI blips. And at least one secret.
 
 ## Architecture
 
 - **Next.js 16 (App Router), React 19, strict TypeScript, Tailwind CSS 4, framer-motion 12.** No UI component libraries.
 - **Client Wii shell.** The server renders `/` and `/c/[slug]`; from there `components/wii/WiiShell.tsx` takes over. Opening a channel is a client-side zoom that updates the URL with `pushState`, and Back/Forward are handled via `popstate` — no server round-trips while browsing.
 - **Lazy-loaded sections.** Each channel body lives in `components/sections/` and is code-split with `next/dynamic` behind a "Now loading…" placeholder (`components/sections/registry.tsx`).
-- **Real backend.** `app/api/guestbook` and `app/api/visits` are Node route handlers on top of a small `SiteStore` interface (`lib/server/store.ts`) with two interchangeable implementations:
-    - **SQLite** (`better-sqlite3`) for local dev and self-hosting — auto-creates `./.data/site.db` on first use.
-    - **Postgres** (`pg`) for production — selected automatically when `DATABASE_URL` (or `POSTGRES_URL`) is set.
-- **Abuse controls.** Guestbook posts are rate-limited per salted IP hash (set `IP_HASH_SALT` in production; raw IPs are never stored) and filtered by a honeypot field.
+- **Fully static.** Every route prerenders — there is no database, no API surface, and no server state to operate.
 - **Design tokens.** The whole look lives in `app/globals.css` as Tailwind theme tokens (`wii-bg`, `wii-blue`, `shadow-wii`, `rounded-channel`, …). Fonts are Fredoka and Varela Round via `next/font`.
 - **Sound.** UI blips are synthesized with the WebAudio API (`lib/sound.ts`) — no audio files, off by default, toggled from the bottom bar.
 
@@ -21,15 +18,11 @@ npm install
 npm run dev
 ```
 
-That's it — with no database configured, the store falls back to SQLite and creates `./.data` automatically (gitignored). The site runs at http://localhost:3000.
+The site runs at http://localhost:3000. No environment variables or services are required.
 
 ## Deployment
 
-Built for Vercel, but any Node host works.
-
-- Set `DATABASE_URL` to a Postgres connection string (e.g. Neon or Supabase) — serverless filesystems are read-only, so SQLite is not an option there.
-- Set `IP_HASH_SALT` to a random secret so rate-limit hashes aren't computed with the dev fallback salt.
-- Without a database, the guestbook and visitor-counter APIs return `503` and the UI degrades gracefully (the counter hides itself; the guestbook shows a load error with a retry button).
+Built for Vercel, but any Node host (or static host) works — push to the default branch and it deploys. No environment variables are required.
 
 ## Scripts
 

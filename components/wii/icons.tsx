@@ -228,37 +228,6 @@ export function AiLabIcon({ className }: IconProps) {
     );
 }
 
-export function GuestbookIcon({ className }: IconProps) {
-    return (
-        <svg {...svgProps(className)}>
-            <rect
-                x="7"
-                y="9"
-                width="24"
-                height="30"
-                rx="4"
-                fill={WHITE}
-                stroke={BLUE_DEEP}
-                strokeWidth="2.5"
-            />
-            <path d="M13 9v30" stroke={LINE} strokeWidth="2" />
-            <path
-                d="M18 18h8M18 24h8"
-                stroke={BLUE_SOFT}
-                strokeWidth="2.5"
-                strokeLinecap="round"
-            />
-            <path
-                d="M29 31 39 21"
-                stroke={BLUE}
-                strokeWidth="6"
-                strokeLinecap="round"
-            />
-            <path d="M25.5 38.5l1.7-6.4 4.7 4.7z" fill={BLUE_DEEP} />
-        </svg>
-    );
-}
-
 export function ContactIcon({ className }: IconProps) {
     return (
         <svg {...svgProps(className)}>
@@ -290,7 +259,6 @@ export const CHANNEL_ICONS: Record<ChannelSlug, ComponentType<IconProps>> = {
     experience: ExperienceIcon,
     skills: SkillsIcon,
     "ai-lab": AiLabIcon,
-    guestbook: GuestbookIcon,
     contact: ContactIcon
 };
 

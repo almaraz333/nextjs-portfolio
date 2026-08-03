@@ -3,7 +3,6 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useCallback, useEffect, useRef, useState } from "react";
 
-import VisitorCounter from "@/components/visitor-counter/VisitorCounter";
 import BottomBar from "@/components/wii/BottomBar";
 import ChannelGrid from "@/components/wii/ChannelGrid";
 import ChannelView from "@/components/wii/ChannelView";
@@ -160,10 +159,6 @@ export default function WiiShell({ initialSlug }: WiiShellProps) {
                         onOpen={openChannel}
                         registerTile={registerTile}
                     />
-
-                    <div className="mt-8 flex justify-center sm:mt-10">
-                        <VisitorCounter />
-                    </div>
                 </motion.div>
 
                 <AnimatePresence

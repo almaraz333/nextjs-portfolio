@@ -45,9 +45,6 @@ const SECTIONS: Record<ChannelSlug, ComponentType> = {
     "ai-lab": dynamic(() => import("./AiLabSection"), {
         loading: NowLoading
     }),
-    guestbook: dynamic(() => import("./GuestbookSection"), {
-        loading: NowLoading
-    }),
     contact: dynamic(() => import("./ContactSection"), {
         loading: NowLoading
     })

@@ -10,7 +10,6 @@ export type ChannelSlug =
     | "experience"
     | "skills"
     | "ai-lab"
-    | "guestbook"
     | "contact";
 
 export interface Channel {
@@ -31,7 +30,7 @@ export const CHANNELS: Channel[] = [
         slug: "disc",
         label: "Disc Channel",
         title: "Featured Project",
-        blurb: "The current headline project, spinning in the disc slot."
+        blurb: "Quantum Vault — post-quantum file encryption, in the disc slot."
     },
     {
         slug: "projects",
@@ -56,12 +55,6 @@ export const CHANNELS: Channel[] = [
         label: "AI Lab Channel",
         title: "AI Workflow",
         blurb: "Experiments and workflows from the AI toolbox."
-    },
-    {
-        slug: "guestbook",
-        label: "Guestbook Channel",
-        title: "Guestbook",
-        blurb: "Sign the guestbook and leave a note for future visitors."
     },
     {
         slug: "contact",

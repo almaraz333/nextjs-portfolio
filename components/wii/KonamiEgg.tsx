@@ -144,9 +144,9 @@ export default function KonamiEgg() {
                         </h2>
                         <p className="mt-3 text-sm leading-relaxed text-wii-text/80">
                             Thanks for looking this closely — this site is a
-                            hand-built love letter to 2006: real guestbook, real
-                            visitor counter, synthesized Wii blips, zero UI
-                            libraries.
+                            hand-built love letter to 2006: every channel, tile,
+                            and icon drawn by hand, Wii blips synthesized in the
+                            browser, zero UI libraries.
                         </p>
                         <p className="mt-2 font-display text-sm text-wii-text/60">
                             — Colton

@@ -1,14 +1,11 @@
-import Image from "next/image";
-
-import biggby from "@/public/images/projects/biggby.png";
-import biggbyCheckout from "@/public/images/projects/biggbyCheckout.png";
-
 import { ExternalLink, StackList } from "./ui";
 
 /**
- * Disc Channel — the featured project. All claims come from cv.md:
- * the BIGGBY Coffee experience entry ($12.0M, team of 3, full lifecycle)
- * and the addendum project details (description, live link, screenshots).
+ * Disc Channel — the featured project: Quantum Vault, the post-quantum
+ * encryption app. Facts come from cv.md (Spotlight entry, itself verified
+ * against the repo source: ML-KEM key encapsulation, AES-GCM and
+ * ChaCha20-Poly1305, Go crypto core compiled to WebAssembly) and the live
+ * app at post-quantum-encryption-frontend.vercel.app.
  */
 
 /** Pure-CSS Wii disc: silver sheen, center hole, gentle motion-safe spin. */
@@ -34,6 +31,39 @@ function SpinningDisc() {
     );
 }
 
+const FLOW = [
+    {
+        step: "01",
+        title: "Pick a file",
+        detail: "Anything on your machine — it never leaves the browser."
+    },
+    {
+        step: "02",
+        title: "Encapsulate a key",
+        detail: "ML-KEM-768 generates the shared secret; you keep the private key."
+    },
+    {
+        step: "03",
+        title: "Seal it",
+        detail: "AES-256-GCM or ChaCha20-Poly1305 writes an .encrypted file."
+    }
+];
+
+const FEATURES = [
+    {
+        title: "Quantum-resistant by design",
+        detail: "ML-KEM (Kyber) is the NIST-standardized post-quantum key encapsulation mechanism — built to hold up against attacks a quantum computer could run against RSA or elliptic-curve keys."
+    },
+    {
+        title: "The crypto core is Go, compiled to WebAssembly",
+        detail: "Encrypt and decrypt are exposed to the page as WASM functions, so files are sealed and opened client-side. A Go HTTP server delivers the app; a React Router + TypeScript frontend drives it."
+    },
+    {
+        title: "You hold the key",
+        detail: "Encrypting hands back a private key to store yourself — no key escrow, no accounts, nothing to trust on the server side."
+    }
+];
+
 export default function DiscSection() {
     return (
         <div className="mx-auto flex w-full max-w-4xl flex-col gap-6">
@@ -46,96 +76,84 @@ export default function DiscSection() {
                             Now in the disc slot
                         </p>
                         <h3 className="font-display text-xl font-medium tracking-wide text-wii-text sm:text-2xl">
-                            BIGGBY Coffee — Online Ordering Platform
+                            Quantum Vault
                         </h3>
+                        <p className="font-display text-sm text-wii-text/60">
+                            A post-quantum cryptographic file system
+                        </p>
                         <p className="text-sm leading-relaxed text-wii-text/90 sm:text-base">
-                            A seamless app and web ordering experience for
-                            BIGGBY Coffee: customers build a drink and send the
-                            order to the store of their choosing, with a strong
-                            focus on UX across devices. Built during my time at
-                            BIGGBY (2020–2021), where I managed the platform
-                            through its full development lifecycle.
+                            Encrypt any file in your browser against the day
+                            quantum computers can break today&rsquo;s public-key
+                            crypto. Pick a file, pick a cipher, and Quantum
+                            Vault seals it with a post-quantum key exchange —
+                            handing you back the only key that opens it.
                         </p>
                         <StackList
-                            label="BIGGBY platform tech stack"
+                            label="Quantum Vault tech stack"
                             items={[
-                                "React",
-                                "Redux",
+                                "Go",
+                                "WebAssembly",
+                                "ML-KEM (Kyber)",
+                                "AES-256-GCM",
+                                "ChaCha20-Poly1305",
                                 "TypeScript",
-                                "GraphQL",
-                                "AWS"
+                                "Docker"
                             ]}
                         />
-                        <ExternalLink href="https://app.biggby.com">
-                            Live — app.biggby.com
-                        </ExternalLink>
+                        <div className="flex flex-wrap justify-center gap-2 sm:justify-start">
+                            <ExternalLink href="https://post-quantum-encryption-frontend.vercel.app/">
+                                Try it live
+                            </ExternalLink>
+                            <ExternalLink href="https://github.com/almaraz333/post-quantum-encryption-backend">
+                                Backend repo
+                            </ExternalLink>
+                            <ExternalLink href="https://github.com/almaraz333/post-quantum-encryption-frontend">
+                                Frontend repo
+                            </ExternalLink>
+                        </div>
                     </div>
                 </div>
             </section>
 
-            {/* Highlight strip */}
-            <section aria-label="BIGGBY platform highlights">
-                <dl className="grid gap-3 sm:grid-cols-3 sm:gap-4">
-                    <div className="flex flex-col rounded-2xl border border-wii-line bg-wii-white p-4 text-center shadow-wii-sm">
-                        <dt className="order-2 mt-1 text-xs text-wii-text/70">
-                            in revenue generated by the platform
-                        </dt>
-                        <dd className="font-display text-2xl font-medium text-wii-blue-deep">
-                            $12.0M
-                        </dd>
-                    </div>
-                    <div className="flex flex-col rounded-2xl border border-wii-line bg-wii-white p-4 text-center shadow-wii-sm">
-                        <dt className="order-2 mt-1 text-xs text-wii-text/70">
-                            junior engineers led and mentored
-                        </dt>
-                        <dd className="font-display text-2xl font-medium text-wii-blue-deep">
-                            Team of 3
-                        </dd>
-                    </div>
-                    <div className="flex flex-col rounded-2xl border border-wii-line bg-wii-white p-4 text-center shadow-wii-sm">
-                        <dt className="order-2 mt-1 text-xs text-wii-text/70">
-                            built, deployed, and maintained
-                        </dt>
-                        <dd className="font-display text-2xl font-medium text-wii-blue-deep">
-                            Full lifecycle
-                        </dd>
-                    </div>
-                </dl>
+            {/* How it works — a dark "vault terminal" strip, a nod to the app's own UI */}
+            <section aria-label="How Quantum Vault works">
+                <ol className="grid list-none gap-3 rounded-channel border border-wii-line bg-[#101820] p-4 shadow-wii-sm sm:grid-cols-3 sm:gap-4 sm:p-5">
+                    {FLOW.map(item => (
+                        <li
+                            key={item.step}
+                            className="rounded-2xl border border-[#1f3b45] bg-[#0b1117] p-4"
+                        >
+                            <p className="font-mono text-[11px] tracking-[0.2em] text-[#5eead4]">
+                                {item.step}
+                            </p>
+                            <h4 className="mt-1.5 font-display text-base font-medium tracking-wide text-[#8ef79f]">
+                                {item.title}
+                            </h4>
+                            <p className="mt-1.5 text-sm leading-relaxed text-[#c6d4dd]">
+                                {item.detail}
+                            </p>
+                        </li>
+                    ))}
+                </ol>
             </section>
 
-            {/* Screenshots */}
-            <section aria-label="BIGGBY platform screenshots">
-                <div className="grid gap-4 sm:grid-cols-2">
-                    <figure className="overflow-hidden rounded-channel border border-wii-line bg-wii-white shadow-wii-sm">
-                        <div className="relative aspect-[16/10] w-full overflow-hidden border-b border-wii-line bg-wii-bg-light">
-                            <Image
-                                src={biggby}
-                                alt="BIGGBY online ordering drink builder — customizing a Caramel Marvel latte with size, shot count, and flavor options"
-                                fill
-                                sizes="(min-width: 640px) 28rem, 100vw"
-                                className="object-cover"
-                            />
-                        </div>
-                        <figcaption className="px-4 py-3 text-xs text-wii-text/70">
-                            Build Yours — drink customization in the ordering
-                            flow
-                        </figcaption>
-                    </figure>
-                    <figure className="overflow-hidden rounded-channel border border-wii-line bg-wii-white shadow-wii-sm">
-                        <div className="relative aspect-[16/10] w-full overflow-hidden border-b border-wii-line bg-wii-bg-light">
-                            <Image
-                                src={biggbyCheckout}
-                                alt="BIGGBY online ordering checkout screen with pickup details and an order summary"
-                                fill
-                                sizes="(min-width: 640px) 28rem, 100vw"
-                                className="object-cover"
-                            />
-                        </div>
-                        <figcaption className="px-4 py-3 text-xs text-wii-text/70">
-                            Checkout — pickup details and order summary
-                        </figcaption>
-                    </figure>
-                </div>
+            {/* Why it's interesting */}
+            <section aria-label="Quantum Vault highlights">
+                <ul className="grid list-none gap-4 sm:grid-cols-3">
+                    {FEATURES.map(feature => (
+                        <li
+                            key={feature.title}
+                            className="rounded-channel border border-wii-line bg-wii-white p-5 shadow-wii-sm"
+                        >
+                            <h4 className="font-display text-base font-medium tracking-wide text-wii-text">
+                                {feature.title}
+                            </h4>
+                            <p className="mt-2 text-sm leading-relaxed text-wii-text/80">
+                                {feature.detail}
+                            </p>
+                        </li>
+                    ))}
+                </ul>
             </section>
         </div>
     );

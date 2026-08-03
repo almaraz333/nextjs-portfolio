@@ -43,7 +43,7 @@ interface Project {
 
 const SPOTLIGHT_PROJECTS: Project[] = [
     {
-        name: "Post-Quantum Encryption",
+        name: "Quantum Vault",
         year: "2026",
         description:
             "In-browser file encryption built on the NIST post-quantum standard ML-KEM (Kyber), paired with AES-GCM and ChaCha20-Poly1305 authenticated encryption — the crypto core is written in Go and compiled to WebAssembly, so files are encrypted right in the browser.",
@@ -56,8 +56,9 @@ const SPOTLIGHT_PROJECTS: Project[] = [
             "TypeScript",
             "Docker"
         ],
-        monogram: "PQ",
+        monogram: "QV",
         spotlight: true,
+        live: "https://post-quantum-encryption-frontend.vercel.app/",
         moreLinks: [
             {
                 href: "https://github.com/almaraz333/post-quantum-encryption-backend",
