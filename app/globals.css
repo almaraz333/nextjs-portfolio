@@ -1,0 +1,89 @@
+@import "tailwindcss";
+
+/*
+ * Wii Menu design tokens — the single styling contract for the whole site.
+ * Consumed as Tailwind utilities: bg-wii-blue, text-wii-text, border-wii-line,
+ * shadow-wii, shadow-wii-glow, rounded-channel, font-display, font-body, …
+ */
+@theme {
+    /* Palette (brief §3.1) */
+    --color-wii-bg: #e8ebef;
+    --color-wii-bg-light: #f7f9fb;
+    --color-wii-white: #ffffff;
+    --color-wii-blue: #22a9e0;
+    --color-wii-blue-soft: #9bd9f2;
+    --color-wii-blue-deep: #0a7cb5;
+    --color-wii-line: #c9d2da;
+    --color-wii-text: #33404a;
+
+    /* Shadows */
+    --shadow-wii: 0 10px 30px rgba(60, 90, 120, 0.18);
+    --shadow-wii-sm: 0 3px 10px rgba(60, 90, 120, 0.14);
+    --shadow-wii-glow:
+        0 0 0 3px rgba(34, 169, 224, 0.55), 0 8px 28px rgba(34, 169, 224, 0.35);
+
+    /* Radii */
+    --radius-channel: 18px;
+
+    /* Typography (wired to next/font variables in app/layout.tsx) */
+    --font-display: var(--font-fredoka), ui-rounded, system-ui, sans-serif;
+    --font-body: var(--font-varela), ui-rounded, system-ui, sans-serif;
+}
+
+/* Shared layout metrics (consumed as e.g. h-(--wii-bar-height)). */
+:root {
+    --wii-bar-height: 4.25rem;
+}
+
+@media (min-width: 640px) {
+    :root {
+        --wii-bar-height: 5rem;
+    }
+}
+
+/* Visible Wii-blue focus ring everywhere; components may add glow on top. */
+:focus-visible {
+    outline: 3px solid var(--color-wii-blue);
+    outline-offset: 2px;
+}
+
+::selection {
+    background: var(--color-wii-blue-soft);
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100dvh;
+    background: linear-gradient(
+        180deg,
+        var(--color-wii-bg) 0%,
+        var(--color-wii-bg-light) 55%,
+        var(--color-wii-bg) 100%
+    );
+    color: var(--color-wii-text);
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Mii parade keyframes (components/wii/MiiParade.tsx): a one-way stroll
+   across the viewport plus a gentle per-figure walking bob. */
+@keyframes wii-parade-walk {
+    from {
+        transform: translateX(-7rem);
+    }
+    to {
+        transform: translateX(calc(100vw + 3rem));
+    }
+}
+
+@keyframes wii-parade-bob {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-3px);
+    }
+}

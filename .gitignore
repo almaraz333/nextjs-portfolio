@@ -3,3 +3,6 @@ node_modules
 dist
 .vercel
 .enc
+
+# TypeScript incremental cache
+tsconfig.tsbuildinfo
