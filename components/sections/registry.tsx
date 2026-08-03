@@ -9,7 +9,7 @@ import type { ChannelSlug } from "@/lib/channels";
  * Section registry — maps a channel slug to its lazily-loaded body.
  *
  * PUBLIC API (stable, other agents build against it): getSection(slug).
- * To ship a real section, point the matching entry at the new module; the
+ * Each entry points at a real section module (default export); the
  * signature must stay exactly `getSection(slug: ChannelSlug): ComponentType`.
  */
 
@@ -27,45 +27,30 @@ function NowLoading() {
 // NOTE: next/dynamic requires its options argument to be an inline object
 // literal (it is statically analyzed), hence the repetition below.
 const SECTIONS: Record<ChannelSlug, ComponentType> = {
-    mii: dynamic(() => import("./placeholders").then(m => m.MiiSection), {
+    mii: dynamic(() => import("./MiiSection"), {
         loading: NowLoading
     }),
-    disc: dynamic(() => import("./placeholders").then(m => m.DiscSection), {
+    disc: dynamic(() => import("./DiscSection"), {
         loading: NowLoading
     }),
-    projects: dynamic(
-        () => import("./placeholders").then(m => m.ProjectsSection),
-        {
-            loading: NowLoading
-        }
-    ),
-    experience: dynamic(
-        () => import("./placeholders").then(m => m.ExperienceSection),
-        {
-            loading: NowLoading
-        }
-    ),
-    skills: dynamic(() => import("./placeholders").then(m => m.SkillsSection), {
+    projects: dynamic(() => import("./ProjectsSection"), {
         loading: NowLoading
     }),
-    "ai-lab": dynamic(
-        () => import("./placeholders").then(m => m.AiLabSection),
-        {
-            loading: NowLoading
-        }
-    ),
-    guestbook: dynamic(
-        () => import("./placeholders").then(m => m.GuestbookSection),
-        {
-            loading: NowLoading
-        }
-    ),
-    contact: dynamic(
-        () => import("./placeholders").then(m => m.ContactSection),
-        {
-            loading: NowLoading
-        }
-    )
+    experience: dynamic(() => import("./ExperienceSection"), {
+        loading: NowLoading
+    }),
+    skills: dynamic(() => import("./SkillsSection"), {
+        loading: NowLoading
+    }),
+    "ai-lab": dynamic(() => import("./AiLabSection"), {
+        loading: NowLoading
+    }),
+    guestbook: dynamic(() => import("./GuestbookSection"), {
+        loading: NowLoading
+    }),
+    contact: dynamic(() => import("./ContactSection"), {
+        loading: NowLoading
+    })
 };
 
 export function getSection(slug: ChannelSlug): ComponentType {
