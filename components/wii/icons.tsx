@@ -369,8 +369,20 @@ export function SpeakerOffIcon({ className }: IconProps) {
     return (
         <svg {...glyphProps(className)}>
             <path d="M4 9v6h4l6 5V4L8 9H4z" fill="currentColor" />
+            {/*
+             * A slash straight through the cone — the universal "muted" read,
+             * and unlike a small × beside the speaker it is unmistakable at
+             * 20px. The casing stroke (the button face colour) cuts a gap so
+             * the slash stays crisp where it crosses the cone.
+             */}
             <path
-                d="m16.5 9.5 5 5m0-5-5 5"
+                d="M3.6 3.6 20.4 20.4"
+                stroke="var(--color-wii-white)"
+                strokeWidth="4.5"
+                strokeLinecap="round"
+            />
+            <path
+                d="M3.6 3.6 20.4 20.4"
                 stroke="currentColor"
                 strokeWidth="2"
                 strokeLinecap="round"

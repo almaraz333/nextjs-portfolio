@@ -6,6 +6,7 @@ import biggby from "@/public/images/projects/biggby.png";
 import krypt from "@/public/images/projects/cyrptoapp.png";
 import eyBlog from "@/public/images/projects/eyBlog.png";
 import gameOfLife from "@/public/images/projects/gameOfLife.png";
+import quantumVault from "@/public/images/projects/quantum-vault.png";
 import symplee from "@/public/images/projects/symplee.png";
 import webScraper from "@/public/images/projects/webScraper.png";
 
@@ -56,7 +57,11 @@ const SPOTLIGHT_PROJECTS: Project[] = [
             "TypeScript",
             "Docker"
         ],
-        monogram: "QV",
+        image: {
+            src: quantumVault,
+            alt: "The Quantum Vault app — an Encrypt panel with ChaCha20-Poly1305 and ML-KEM-768 selected",
+            position: "object-top"
+        },
         spotlight: true,
         live: "https://post-quantum-encryption-frontend.vercel.app/",
         moreLinks: [

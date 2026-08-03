@@ -1,3 +1,7 @@
+import Image from "next/image";
+
+import quantumVault from "@/public/images/projects/quantum-vault.png";
+
 import { ExternalLink, StackList } from "./ui";
 
 /**
@@ -33,17 +37,17 @@ function SpinningDisc() {
 
 const FLOW = [
     {
-        step: "01",
+        step: "1",
         title: "Pick a file",
         detail: "Anything on your machine — it never leaves the browser."
     },
     {
-        step: "02",
+        step: "2",
         title: "Encapsulate a key",
         detail: "ML-KEM-768 generates the shared secret; you keep the private key."
     },
     {
-        step: "03",
+        step: "3",
         title: "Seal it",
         detail: "AES-256-GCM or ChaCha20-Poly1305 writes an .encrypted file."
     }
@@ -115,26 +119,48 @@ export default function DiscSection() {
                 </div>
             </section>
 
-            {/* How it works — a dark "vault terminal" strip, a nod to the app's own UI */}
+            {/* The real app, beside the flow it walks you through */}
             <section aria-label="How Quantum Vault works">
-                <ol className="grid list-none gap-3 rounded-channel border border-wii-line bg-[#101820] p-4 shadow-wii-sm sm:grid-cols-3 sm:gap-4 sm:p-5">
-                    {FLOW.map(item => (
-                        <li
-                            key={item.step}
-                            className="rounded-2xl border border-[#1f3b45] bg-[#0b1117] p-4"
-                        >
-                            <p className="font-mono text-[11px] tracking-[0.2em] text-[#5eead4]">
-                                {item.step}
-                            </p>
-                            <h4 className="mt-1.5 font-display text-base font-medium tracking-wide text-[#8ef79f]">
-                                {item.title}
-                            </h4>
-                            <p className="mt-1.5 text-sm leading-relaxed text-[#c6d4dd]">
-                                {item.detail}
-                            </p>
-                        </li>
-                    ))}
-                </ol>
+                <div className="grid items-start gap-5 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
+                    <figure className="overflow-hidden rounded-channel border border-wii-line bg-wii-white shadow-wii-sm">
+                        <Image
+                            src={quantumVault}
+                            alt="The Quantum Vault app: an Encrypt panel with file picker, symmetric cipher set to ChaCha20-Poly1305 and quantum algorithm set to ML-KEM-768, showing the generated private key, above a matching Decrypt panel"
+                            sizes="(min-width: 1024px) 32rem, 100vw"
+                            placeholder="blur"
+                            className="w-full border-b border-wii-line"
+                        />
+                        <figcaption className="px-4 py-3 text-xs text-wii-text/70">
+                            Encrypting a file — cipher and post-quantum
+                            algorithm are both selectable, and the private key
+                            is handed straight back to you.
+                        </figcaption>
+                    </figure>
+
+                    <ol className="flex list-none flex-col gap-4">
+                        {FLOW.map(item => (
+                            <li
+                                key={item.step}
+                                className="flex gap-4 rounded-channel border border-wii-line bg-wii-white p-5 shadow-wii-sm"
+                            >
+                                <span
+                                    aria-hidden="true"
+                                    className="grid h-9 w-9 shrink-0 place-items-center rounded-full border border-wii-blue-soft bg-wii-bg-light font-display text-sm font-medium text-wii-blue-deep"
+                                >
+                                    {item.step}
+                                </span>
+                                <div className="min-w-0">
+                                    <h4 className="font-display text-base font-medium tracking-wide text-wii-text">
+                                        {item.title}
+                                    </h4>
+                                    <p className="mt-1.5 text-sm leading-relaxed text-wii-text/80">
+                                        {item.detail}
+                                    </p>
+                                </div>
+                            </li>
+                        ))}
+                    </ol>
+                </div>
             </section>
 
             {/* Why it's interesting */}

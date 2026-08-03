@@ -157,7 +157,11 @@ export default function BottomBar({ active, onHome, onStep }: BottomBarProps) {
                             aria-label="Toggle sounds"
                             aria-pressed={enabled}
                             onClick={toggle}
-                            className={`${ROUND_BUTTON} h-11 w-11`}
+                            className={`${ROUND_BUTTON} h-11 w-11 ${
+                                enabled
+                                    ? "text-wii-blue-deep"
+                                    : "text-wii-text/40"
+                            }`}
                         >
                             {enabled ? (
                                 <SpeakerOnIcon className="h-5 w-5" />
